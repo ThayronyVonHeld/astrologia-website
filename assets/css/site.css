@@ -1,0 +1,86 @@
+/* Estilos compartilhados — Maggessy Astrologia */
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem; /* compensa o header fixo ao ir para #ancoras */
+}
+
+body {
+  background-color: #fafafa;
+  overflow-x: hidden;
+}
+
+/* Animação de entrada (usada por .animate-fade-in-up e .reveal) */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Revelar ao rolar: só esconde se o JS estiver ativo (classe .js no <html>) */
+.js .reveal { opacity: 0; }
+.js .reveal.is-visible {
+  animation: fadeInUp 0.8s ease-out both;
+  animation-delay: var(--reveal-delay, 0s);
+}
+
+/* Link de navegação com sublinhado dourado */
+.nav-link {
+  position: relative;
+  transition: color 0.3s ease;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #d4af37;
+  transition: width 0.3s ease;
+}
+.nav-link:hover::after,
+.nav-link[aria-current='page']::after {
+  width: 100%;
+}
+
+/* Ícone dos cards */
+.service-card:hover .card-icon { transform: scale(1.1); }
+
+/* Anéis orbitais (página Sobre mim) */
+.orbital-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Formulário minimalista */
+.minimal-input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(26, 35, 65, 0.25);
+  padding: 12px 0;
+  width: 100%;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  color: #1a2341;
+  transition: all 0.3s ease;
+  outline: none;
+}
+.minimal-input:focus {
+  border-bottom-color: #d4af37;
+  box-shadow: 0 1px 0 0 #d4af37;
+}
+.minimal-input::placeholder { color: rgba(26, 35, 65, 0.6); }
+
+/* Respeita quem prefere menos movimento */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
