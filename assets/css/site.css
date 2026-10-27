@@ -75,12 +75,15 @@ body {
 }
 .minimal-input::placeholder { color: rgba(26, 35, 65, 0.6); }
 
-/* Respeita quem prefere menos movimento */
+/*
+ * Quem ativa "reduzir movimento" no sistema deixa de ver as animações de ENTRADA
+ * (fade/deslocamento ao carregar e ao rolar). As órbitas decorativas, lentas e
+ * sem deslocamento de página, continuam. Para ser mais rígido, adicione aqui:
+ *   *, *::before, *::after { animation: none !important; }
+ */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  *, *::before, *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-  }
+  html .animate-fade-in-up { animation: none; }
+  .js .reveal,
+  .js .reveal.is-visible { opacity: 1; animation: none; }
 }
