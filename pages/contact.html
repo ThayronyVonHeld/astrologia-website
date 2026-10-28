@@ -41,8 +41,8 @@
             <!-- Menu desktop -->
             <nav aria-label="Principal" class="hidden md:flex space-x-8 text-sm uppercase tracking-widest font-light text-navy/80">
             <a href="home.html" class="nav-link hover:text-cosmic">Home</a>
-            <a href="about.html" class="nav-link hover:text-cosmic">Sobre mim</a>
             <a href="maps.html" class="nav-link hover:text-cosmic">Mapas</a>
+            <a href="about.html" class="nav-link hover:text-cosmic">Sobre mim</a>
             <a href="contact.html" class="nav-link text-cosmic" aria-current="page">Contato</a>
             </nav>
 
@@ -116,44 +116,7 @@
                 </div>
             </div>
 
-            <!-- Direita: formulário (abre o WhatsApp com a mensagem pronta) -->
-            <div class="animate-fade-in-up" style="animation-delay: 0.3s;">
-                <div class="bg-white p-8 md:p-12 rounded-2xl border border-navy/5 shadow-xl shadow-navy/5 relative overflow-hidden">
-                    <div aria-hidden="true" class="absolute top-0 right-0 w-24 h-1 bg-gradient-to-r from-gold to-cosmic"></div>
-                    <h2 class="font-serif text-2xl text-navy mb-8">Envie uma mensagem</h2>
-
-                    <form id="contact-form" class="space-y-6">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div>
-                                <label for="nome" class="sr-only">Seu nome</label>
-                                <input type="text" id="nome" name="nome" placeholder="Seu Nome" autocomplete="name" required class="minimal-input">
-                            </div>
-                            <div>
-                                <label for="email" class="sr-only">Seu e-mail (opcional)</label>
-                                <input type="email" id="email" name="email" placeholder="Seu Email (opcional)" autocomplete="email" class="minimal-input">
-                            </div>
-                        </div>
-                        <div>
-                            <label for="assunto" class="sr-only">Assunto</label>
-                            <input type="text" id="assunto" name="assunto" placeholder="Assunto (Ex: Dúvida sobre Mapa Natal)" class="minimal-input">
-                        </div>
-                        <div>
-                            <label for="mensagem" class="sr-only">Mensagem</label>
-                            <textarea id="mensagem" name="mensagem" rows="4" placeholder="Como posso ajudar você a decifrar seu universo?" required class="minimal-input resize-none"></textarea>
-                        </div>
-                        <div class="pt-4">
-                            <button type="submit" class="w-full md:w-auto px-10 py-4 bg-navy text-offwhite font-bold rounded-full hover:bg-gold hover:text-navy transition-all duration-300 shadow-lg shadow-navy/10 font-sans tracking-widest uppercase text-xs">
-                                Enviar pelo WhatsApp
-                            </button>
-                        </div>
-                        <p id="form-status" role="status" aria-live="polite" class="text-sm text-navy/70 min-h-[1.25rem]"></p>
-                        <p class="text-xs text-navy/70 font-light">Ao enviar, o WhatsApp será aberto com a sua mensagem pronta. Nenhum dado fica salvo neste site.</p>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </main>
-
+            
     <!-- Rodapé -->
     <footer class="w-full border-t border-navy/5 py-10 text-center relative mt-auto bg-offwhite">
         <div class="max-w-7xl mx-auto px-6 flex flex-col items-center justify-center">
