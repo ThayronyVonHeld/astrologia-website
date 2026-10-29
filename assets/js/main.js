@@ -75,29 +75,5 @@ document.addEventListener('DOMContentLoaded', () => {
     reveals.forEach((el) => el.classList.add('is-visible'))
   }
 
-  /* ---------- Formulário de contato -> WhatsApp ---------- */
-  const form = document.getElementById('contact-form')
-  if (form) {
-    const status = document.getElementById('form-status')
-    form.addEventListener('submit', (e) => {
-      e.preventDefault()
-      if (!site.whatsappNumber) {
-        status.textContent = 'Contato por WhatsApp indisponível no momento. Tente pelo e-mail.'
-        return
-      }
-      const data = new FormData(form)
-      const parts = [`Olá! Meu nome é ${data.get('nome').trim()}.`]
-      if (data.get('assunto').trim()) parts.push(`Assunto: ${data.get('assunto').trim()}`)
-      parts.push(data.get('mensagem').trim())
-      if (data.get('email').trim()) parts.push(`Meu e-mail: ${data.get('email').trim()}`)
 
-      const url = waUrl(parts.join('\n\n'))
-      status.innerHTML = `Abrindo o WhatsApp… Se não abrir, <a class="underline text-cosmic" href="${url}" target="_blank" rel="noopener noreferrer">clique aqui</a>.`
-      const a = document.createElement('a')
-      a.href = url
-      a.target = '_blank'
-      a.rel = 'noopener noreferrer'
-      a.click()
-    })
-  }
 })
