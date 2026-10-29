@@ -4,10 +4,10 @@
  */
 window.SITE = {
   // Somente dígitos, com código do país (55) + DDD + número. Ex.: 5511987654321
-  whatsappNumber: '5511999990000',
+  whatsappNumber: '351931313315',
   // Como o número aparece escrito na página de contato
-  whatsappDisplay: '+55 (11) 99999-0000',
-  email: 'contato@maggessyastrologia.com',
+  whatsappDisplay: '+351 931 313 315',
+  email: 'maggessyastrologia@gmail.com',
   // Usuário do Instagram, sem o @
   instagram: 'maggessyastrologia',
   // Mensagem padrão quando o botão não define uma específica
