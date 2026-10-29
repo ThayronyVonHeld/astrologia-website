@@ -62,7 +62,7 @@
         </nav>
     </header>
 
-    <main id="conteudo" class="flex-grow flex items-center justify-center relative w-full max-w-7xl mx-auto px-6 md:px-12 py-12 md:py-20">
+    <main id="conteudo" class="flex-grow flex flex-col relative w-full max-w-7xl mx-auto px-6 md:px-12 py-12 md:py-20 gap-24 md:gap-32">
 
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-8 items-center w-full">
 
@@ -112,6 +112,87 @@
 
             </div>
         </div>
+
+        <!-- NOVA SEÇÃO 1: BIOGRAFIA (Retângulo em pé) -->
+        <section class="w-full flex justify-center reveal">
+            <div class="bg-white p-10 md:p-16 rounded-[2rem] border border-cosmic/10 shadow-xl max-w-2xl w-full relative flex flex-col items-center">
+                
+                <!-- Ícone decorativo na borda superior -->
+                <div class="w-14 h-14 bg-offwhite rounded-full border border-gold/30 flex items-center justify-center mb-8 text-gold-deep absolute -top-7 shadow-sm">
+                    <svg aria-hidden="true" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <circle cx="12" cy="12" r="10" stroke-width="1.5"/>
+                        <circle cx="12" cy="12" r="4" stroke-width="1.5"/>
+                        <line x1="2" y1="12" x2="22" y2="12" stroke-width="1.5"/>
+                        <line x1="12" y1="2" x2="12" y2="22" stroke-width="1.5"/>
+                    </svg>
+                </div>
+
+                <div class="space-y-6 font-sans text-navy/80 text-[1.05rem] md:text-lg leading-relaxed font-light mt-4 text-left">
+                    <p>
+                        Desde muito nova, fui incentivada pelos meus pais a explorar o universo holístico. Cresci em uma família esotérica: meu pai foi pioneiro da aromaterapia no Brasil, e minha mãe atua como terapeuta holística há mais de 35 anos.
+                    </p>
+                    <p>
+                        Aos 14 anos, despertei meu interesse pela astrologia e, com o passar do tempo, senti vontade de me aprofundar nesse universo. Aos 18, busquei uma formação para ampliar meus conhecimentos e compreender ainda mais essa prática que sempre esteve presente na minha vida.
+                    </p>
+                    <p>
+                        Hoje, aos 28 anos, concilio minha trajetória profissional como fisioterapeuta com meus estudos na área da Saúde da Mulher, sem deixar de lado meu amor pela astrologia.
+                    </p>
+                    <p>
+                        Sigo compartilhando meus conhecimentos com quem deseja se conhecer melhor, compreender a própria jornada e encontrar novas perspectivas para a vida.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- RELATOS (4 Quadrados/Cards) -->
+        <section class="w-full space-y-12 reveal">
+            <div class="text-center space-y-4">
+                <h2 class="font-serif text-3xl md:text-4xl text-navy">Relatos de quem já se encontrou</h2>
+                <div class="w-16 h-px bg-gold mx-auto"></div>
+            </div>
+            
+            <!-- Grid com 4 cartões -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+                
+                <!-- Card 1 -->
+                <div class="bg-white p-8 rounded-2xl border border-navy/5 hover:border-cosmic/40 hover:shadow-xl transition-all duration-300 flex flex-col h-full relative aspect-square">
+                    <div class="text-gold/40 font-serif text-5xl leading-none h-6 mb-4">“</div>
+                    <p class="font-sans text-navy/70 text-sm leading-relaxed flex-grow italic">
+                        Conheci a clara e ela foi super importante para minha vida. A leitura do meu mapa abriu meus olhos para caminhos profissionais que eu nem imaginava.
+                    </p>
+                    <span class="block text-right font-serif text-cosmic text-sm font-semibold mt-6 tracking-wide">— Camila T.</span>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white p-8 rounded-2xl border border-navy/5 hover:border-cosmic/40 hover:shadow-xl transition-all duration-300 flex flex-col h-full relative aspect-square">
+                    <div class="text-gold/40 font-serif text-5xl leading-none h-6 mb-4">“</div>
+                    <p class="font-sans text-navy/70 text-sm leading-relaxed flex-grow italic">
+                        Fazer a Revolução Solar mudou minha perspectiva do ano. Ela tem uma sensibilidade incrível para transmitir a mensagem dos astros de forma acolhedora.
+                    </p>
+                    <span class="block text-right font-serif text-cosmic text-sm font-semibold mt-6 tracking-wide">— Rafael M.</span>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white p-8 rounded-2xl border border-navy/5 hover:border-cosmic/40 hover:shadow-xl transition-all duration-300 flex flex-col h-full relative aspect-square">
+                    <div class="text-gold/40 font-serif text-5xl leading-none h-6 mb-4">“</div>
+                    <p class="font-sans text-navy/70 text-sm leading-relaxed flex-grow italic">
+                        Sempre tive curiosidade, mas a consulta superou as expectativas. É uma conversa profunda e reconfortante que te faz entender a sua própria essência.
+                    </p>
+                    <span class="block text-right font-serif text-cosmic text-sm font-semibold mt-6 tracking-wide">— Beatriz F.</span>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-white p-8 rounded-2xl border border-navy/5 hover:border-cosmic/40 hover:shadow-xl transition-all duration-300 flex flex-col h-full relative aspect-square">
+                    <div class="text-gold/40 font-serif text-5xl leading-none h-6 mb-4">“</div>
+                    <p class="font-sans text-navy/70 text-sm leading-relaxed flex-grow italic">
+                        Profissional maravilhosa! Conseguiu unir o conhecimento profundo da astrologia com uma empatia que me deixou super à vontade desde o primeiro minuto.
+                    </p>
+                    <span class="block text-right font-serif text-cosmic text-sm font-semibold mt-6 tracking-wide">— Luiza S.</span>
+                </div>
+
+            </div>
+        </section>
 
     </main>
 
