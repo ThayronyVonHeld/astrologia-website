@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maggessy Astrologia | Sinastria Amorosa</title>
+    <meta name="description" content="Aprofunde-se no conhecimento da Sinastria Amorosa e compreenda a compatibilidade, desafios e potenciais da sua relação.">
+    <meta name="theme-color" content="#FAFAFA">
+    <link rel="icon" href="../assets/icons/favicon_1.ico" type="image/x-icon">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: '#101B35',
+                        cosmic: '#4A2E65',
+                        gold: '#D4AF37',
+                        'gold-deep': '#B8960C',
+                        twilight: '#D87093',
+                        'twilight-deep': '#B05070',
+                        offwhite: '#FAF9F6'
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['Lato', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .animate-spin-slow { animation: spin 20s linear infinite; }
+        .animate-spin-slow-reverse { animation: spin-reverse 25s linear infinite; }
+        @keyframes spin-reverse { from { transform: rotate(360deg); } to { transform: rotate(0deg); } }
+        html { scroll-behavior: smooth; }
+        body { background-color: #FAF9F6; }
+    </style>
+</head>
+<body class="text-navy font-sans antialiased min-h-screen flex flex-col">
+
+    <a href="#conteudo" class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[60] focus:bg-navy focus:text-offwhite focus:px-4 focus:py-2 focus:rounded">Pular para o conteúdo</a>
+
+    <!-- Navegação -->
+    <header class="sticky top-0 z-50 w-full bg-offwhite/80 backdrop-blur-sm border-b border-navy/5">
+        <div class="w-full px-6 md:px-12 py-6 flex justify-between items-center max-w-7xl mx-auto">
+            <a href="home.html" class="font-serif text-2xl md:text-3xl text-navy tracking-wide">
+                Maggessy <span class="text-cosmic italic text-xl md:text-2xl">Astrologia</span>
+            </a>
+
+            <!-- Menu desktop -->
+            <nav aria-label="Principal" class="hidden md:flex space-x-8 text-sm uppercase tracking-widest font-light text-navy/80">
+            <a href="home.html" class="nav-link hover:text-cosmic transition-colors">Home</a>
+            <a href="maps.html" class="nav-link text-rose-600 font-bold border-b border-rose-600" aria-current="page">Mapas</a>
+            <a href="about.html" class="nav-link hover:text-cosmic transition-colors">Sobre mim</a>
+            <a href="contact.html" class="nav-link hover:text-cosmic transition-colors">Contato</a>
+            </nav>
+
+            <!-- Botão do menu mobile -->
+            <button id="menu-toggle" type="button" class="md:hidden text-navy hover:text-gold transition" aria-label="Abrir menu">
+                <svg data-icon="open" aria-hidden="true" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </div>
+    </header>
+
+    <main id="conteudo" class="flex-grow">
+        
+        <!-- Breadcrumb / Voltar -->
+        <div class="bg-offwhite pt-8 pb-4">
+            <div class="max-w-7xl mx-auto px-6 md:px-12">
+                <a href="maps.html" class="inline-flex items-center text-xs font-bold uppercase tracking-widest text-navy/50 hover:text-rose-600 transition-colors">
+                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                    Voltar para Mapas
+                </a>
+            </div>
+        </div>
+
+        <!-- HERO SECTION: Sinastria Amorosa (Vermelho / rose-600) -->
+        <section class="bg-offwhite py-12 md:py-20 relative overflow-hidden">
+            <div class="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10">
+                
+                <!-- Texto Principal -->
+                <div class="space-y-6">
+                    <div class="inline-flex items-center gap-3 px-4 py-2 bg-rose-600/5 border border-rose-600/20 rounded-full text-rose-600 mb-2">
+                        <svg aria-hidden="true" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="8.5" cy="12" r="6" />
+                            <circle cx="15.5" cy="12" r="6" />
+                        </svg>
+                        <span class="text-xs uppercase tracking-widest font-bold">Leitura Relacional</span>
+                    </div>
+                    
+                    <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl text-navy leading-tight">
+                        Sinastria <span class="text-rose-600 italic">Amorosa</span>
+                    </h1>
+                    
+                    <div class="w-16 h-px bg-rose-600 opacity-50"></div>
+                    
+                    <p class="font-sans text-navy/75 text-lg md:text-xl font-light leading-relaxed">
+                        Análise profunda da compatibilidade entre duas pessoas. A Sinastria examina como os dois mapas natais conversam entre si, revelando as dinâmicas de afeto, os pontos de sintonia, os desafios de convivência e o potencial evolutivo da relação.
+                    </p>
+                    
+                    <div class="pt-4 flex flex-col sm:flex-row gap-4">
+                        <a href="contact.html" data-wa data-wa-text="Olá! Gostaria de agendar a leitura de Sinastria Amorosa." class="inline-flex items-center justify-center px-8 py-4 bg-rose-600 text-white rounded-full hover:bg-navy transition-all duration-300 font-sans tracking-widest text-xs uppercase font-bold shadow-lg shadow-rose-600/20">
+                            Agendar Leitura
+                        </a>
+                        <a href="#detalhes" class="inline-flex items-center justify-center px-8 py-4 bg-transparent border border-navy/20 text-navy rounded-full hover:border-rose-600 hover:text-rose-600 transition-all duration-300 font-sans tracking-widest text-xs uppercase font-bold">
+                            O que exploramos ↓
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Ilustração Astrológica (Mandala / Círculos entrelaçados) -->
+                <div class="relative flex justify-center items-center h-[400px]">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-rose-600/10 to-transparent rounded-full opacity-50 blur-3xl"></div>
+                    <svg aria-hidden="true" viewBox="0 0 500 500" class="w-full max-w-[400px] mx-auto drop-shadow-2xl overflow-visible text-rose-600">
+                        <circle cx="250" cy="250" r="220" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="4 8" class="origin-center animate-spin-slow opacity-40" />
+                        <circle cx="250" cy="250" r="160" fill="none" stroke="currentColor" stroke-width="1.5" stroke-opacity="0.5" class="origin-center animate-spin-slow-reverse opacity-60" />
+                        <circle cx="250" cy="250" r="90" fill="none" stroke="currentColor" stroke-width="0.5" stroke-opacity="0.3" class="origin-center animate-spin-slow" />
+                        <g class="origin-center">
+                            <!-- Ícone de Sinastria / Círculos unidos no Centro -->
+                            <circle cx="225" cy="250" r="35" fill="none" stroke="currentColor" stroke-width="2" />
+                            <circle cx="275" cy="250" r="35" fill="none" stroke="currentColor" stroke-width="2" />
+                        </g>
+                        <!-- Planetas Flutuantes -->
+                        <g class="origin-center animate-spin-slow">
+                            <circle cx="470" cy="250" r="8" fill="currentColor" opacity="0.8" />
+                        </g>
+                        <g class="origin-center animate-spin-slow-reverse">
+                            <circle cx="250" cy="90" r="12" fill="none" stroke="currentColor" stroke-width="2" />
+                            <circle cx="250" cy="90" r="4" fill="currentColor" />
+                        </g>
+                    </svg>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SEÇÃO: O QUE EXPLORAMOS (Grid de Detalhes) -->
+        <section id="detalhes" class="py-20 md:py-32 bg-white">
+            <div class="max-w-7xl mx-auto px-6 md:px-12">
+                
+                <div class="text-center mb-16 max-w-3xl mx-auto">
+                    <span class="text-rose-600 uppercase tracking-[0.2em] text-xs font-bold font-sans">Mergulho Profundo</span>
+                    <h2 class="font-serif text-3xl md:text-4xl text-navy mt-4 mb-6">O que descobrimos na Sinastria Amorosa?</h2>
+                    <p class="font-sans text-navy/70 text-base font-light leading-relaxed">
+                        A união de duas histórias. Na sessão de sinastria, cruzamos planetas e casas para entender como vocês nutrem o afeto, resolvem conflitos e constroem o futuro a dois.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Tópico 1 -->
+                    <div class="bg-offwhite p-8 rounded-2xl border border-navy/5 hover:border-rose-600/30 hover:shadow-lg transition-all duration-300">
+                        <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-rose-600 mb-6 border border-rose-600/10 shadow-sm">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"></path></svg>
+                        </div>
+                        <h3 class="font-serif text-xl text-navy mb-3">Linguagens do Afeto</h3>
+                        <p class="font-sans text-navy/70 text-sm font-light leading-relaxed">
+                            Como cada um expressa carinho e o que faz o outro se sentir amado. O posicionamento de Vênus e da Lua revela a sintonia emocional e romântica do casal.
+                        </p>
+                    </div>
+
+                    <!-- Tópico 2 -->
+                    <div class="bg-offwhite p-8 rounded-2xl border border-navy/5 hover:border-rose-600/30 hover:shadow-lg transition-all duration-300">
+                        <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-rose-600 mb-6 border border-rose-600/10 shadow-sm">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M8.625 9.75a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375m-13.5 3.01c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.184-4.183a1.14 1.14 0 01.778-.332 48.294 48.294 0 005.83-.498c1.585-.233 2.708-1.626 2.708-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.748.177-7.066.523C3.353 3.746 2.25 5.14 2.25 6.741v6.018z"></path></svg>
+                        </div>
+                        <h3 class="font-serif text-xl text-navy mb-3">Comunicação e Diálogo</h3>
+                        <p class="font-sans text-navy/70 text-sm font-light leading-relaxed">
+                            A influência de Mercúrio na relação. Como vocês trocam ideias, resolvem mal-entendidos e se entendem intelectual e verbalmente no dia a dia.
+                        </p>
+                    </div>
+
+                    <!-- Tópico 3 -->
+                    <div class="bg-offwhite p-8 rounded-2xl border border-navy/5 hover:border-rose-600/30 hover:shadow-lg transition-all duration-300">
+                        <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-rose-600 mb-6 border border-rose-600/10 shadow-sm">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15.362 5.214A8.252 8.252 0 0112 21 8.25 8.25 0 016.038 7.048 8.287 8.287 0 009 9.6a8.983 8.983 0 013.361-6.867 8.21 8.21 0 003 2.481z"></path><path stroke-linecap="round" stroke-linejoin="round" d="M12 12.75a2.25 2.25 0 100-4.5 2.25 2.25 0 000 4.5z"></path></svg>
+                        </div>
+                        <h3 class="font-serif text-xl text-navy mb-3">Química e Atração (Marte)</h3>
+                        <p class="font-sans text-navy/70 text-sm font-light leading-relaxed">
+                            O magnetismo, a energia de ação conjunta e a paixão. Entenda como o impulso de Marte de um toca os pontos sensíveis do outro.
+                        </p>
+                    </div>
+
+                    <!-- Tópico 4 -->
+                    <div class="bg-offwhite p-8 rounded-2xl border border-navy/5 hover:border-rose-600/30 hover:shadow-lg transition-all duration-300">
+                        <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-rose-600 mb-6 border border-rose-600/10 shadow-sm">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z"></path></svg>
+                        </div>
+                        <h3 class="font-serif text-xl text-navy mb-3">Superando Desafios</h3>
+                        <p class="font-sans text-navy/70 text-sm font-light leading-relaxed">
+                            Identificação de pontos de atrito e gatilhos de conflito. A astrologia aponta onde há choques de ego para que o casal possa lidar com eles de forma consciente.
+                        </p>
+                    </div>
+
+                    <!-- Tópico 5 -->
+                    <div class="bg-offwhite p-8 rounded-2xl border border-navy/5 hover:border-rose-600/30 hover:shadow-lg transition-all duration-300">
+                        <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-rose-600 mb-6 border border-rose-600/10 shadow-sm">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17L17.25 21A2.25 2.25 0 0019.5 18.75V5.25A2.25 2.25 0 0017.25 3H6.75A2.25 2.25 0 004.5 5.25v13.5A2.25 2.25 0 006.75 21l5.83-5.83z"></path></svg>
+                        </div>
+                        <h3 class="font-serif text-xl text-navy mb-3">Propósito do Casal (Composto)</h3>
+                        <p class="font-sans text-navy/70 text-sm font-light leading-relaxed">
+                            A energia de uma terceira entidade: o mapa da própria relação. Descubra qual é a missão conjunta de alma e o destino que este vínculo convida vocês a viverem.
+                        </p>
+                    </div>
+
+                    <!-- Tópico 6 -->
+                    <div class="bg-offwhite p-8 rounded-2xl border border-navy/5 hover:border-rose-600/30 hover:shadow-lg transition-all duration-300 flex flex-col justify-center items-center text-center">
+                        <div class="w-12 h-12 bg-rose-600/10 rounded-full flex items-center justify-center text-rose-600 mb-4 border border-rose-600/20">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"></path></svg>
+                        </div>
+                        <h3 class="font-serif text-xl text-navy mb-3">Crescimento Mútuo</h3>
+                        <p class="font-sans text-navy/70 text-sm font-light leading-relaxed mb-6">
+                            Ferramentas práticas e direcionadas para fortalecer a cumplicidade, o respeito e a longevidade do amor entre vocês.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO: COMO FUNCIONA E ENTREGA -->
+        <section class="py-20 bg-navy relative overflow-hidden text-offwhite border-t-8 border-rose-600">
+            <!-- Fundo estrelado -->
+            <div class="absolute inset-0 bg-gradient-to-r from-rose-600/10 via-transparent to-transparent opacity-50"></div>
+            
+            <div class="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-16 relative z-10 items-center">
+                
+                <!-- Informações Práticas -->
+                <div>
+                    <h2 class="font-serif text-3xl md:text-4xl text-offwhite mb-8">Como funciona a entrega?</h2>
+                    
+                    <ul class="space-y-6">
+                        <li class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-rose-600/20 border border-rose-600 flex items-center justify-center shrink-0 mt-1">
+                                <svg class="w-5 h-5 text-rose-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-serif text-xl text-white mb-1">Sessão Casal ou Solo (1h45)</h4>
+                                <p class="font-sans text-offwhite/70 text-sm leading-relaxed font-light">Uma consulta aprofundada via Google Meet (pode ser feita a dois ou apenas por um dos parceiros).</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-rose-600/20 border border-rose-600 flex items-center justify-center shrink-0 mt-1">
+                                <svg class="w-5 h-5 text-rose-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-serif text-xl text-white mb-1">PDF Dinâmicas Conjuntas</h4>
+                                <p class="font-sans text-offwhite/70 text-sm leading-relaxed font-light">Receba um relatório exclusivo detalhando os principais cruzamentos e aspectos da relação.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-rose-600/20 border border-rose-600 flex items-center justify-center shrink-0 mt-1">
+                                <svg class="w-5 h-5 text-rose-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-serif text-xl text-white mb-1">Dados de Ambas as Pessoas</h4>
+                                <p class="font-sans text-offwhite/70 text-sm leading-relaxed font-light">Precisarei de Data, Hora exata e Cidade de nascimento de ambos para realizar o cálculo conjugado.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Card de Agendamento CTA -->
+                <div class="bg-white p-10 md:p-12 rounded-3xl shadow-2xl text-center border border-rose-600/30 relative">
+                    <div class="absolute -top-6 left-1/2 -translate-x-1/2">
+                        <div class="bg-rose-600 text-white text-[10px] font-bold uppercase tracking-widest px-4 py-2 rounded-full border-4 border-white shadow-sm">
+                            Leitura Relacional
+                        </div>
+                    </div>
+                    
+                    <h3 class="font-serif text-3xl text-navy mt-4 mb-2">Compreenda a Vossa Relação</h3>
+                    <p class="font-sans text-navy/70 text-sm font-light mb-8">
+                        Explore as afinidades e potências que unem os vossos corações.
+                    </p>
+                    
+                    <a href="contact.html" data-wa data-wa-text="Olá! Gostaria de agendar a leitura de Sinastria Amorosa." class="block w-full py-4 text-center bg-rose-600 text-white font-bold rounded-full hover:bg-navy transition-all duration-300 text-xs uppercase tracking-widest shadow-lg hover:shadow-xl">
+                        Consultar Disponibilidade e Valores
+                    </a>
+                    
+                    <p class="font-sans text-navy/40 text-[10px] uppercase tracking-wide mt-4">
+                        Atendimento online para todo o mundo
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="w-full border-t border-navy/5 py-10 text-center relative mt-auto bg-offwhite">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col items-center justify-center">
+            <div aria-hidden="true" class="flex gap-2 mb-5 text-gold/40">
+                <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L14.5 9.5H22L16 14L18.5 21.5L12 17L5.5 21.5L8 14L2 9.5H9.5L12 2Z"/></svg>
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L14.5 9.5H22L16 14L18.5 21.5L12 17L5.5 21.5L8 14L2 9.5H9.5L12 2Z"/></svg>
+                <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L14.5 9.5H22L16 14L18.5 21.5L12 17L5.5 21.5L8 14L2 9.5H9.5L12 2Z"/></svg>
+            </div>
+            <a href="home.html" class="font-serif text-xl text-navy tracking-wide mb-3">Maggessy Astrologia</a>
+            <p class="font-sans text-navy/70 text-xs tracking-wider uppercase">
+                &copy; <span data-year>2026</span> Maggessy Astrologia. Todos os direitos reservados.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
