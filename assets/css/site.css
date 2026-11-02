@@ -40,7 +40,8 @@ body {
   transition: width 0.3s ease;
 }
 
-.nav-link:hover::after {
+.nav-link:hover::after,
+.nav-link[aria-current='page']::after {
   width: 100%;
 }
 
