@@ -1,22 +1,27 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maggessy Astrologia | Mapas</title>
-    <meta name="description" content="Mapa Astral Natal, Revolução Solar, Sinastria Relacional e Mapa Vocacional: escolha a leitura ideal para o seu momento.">
+    <meta name="description"
+        content="Mapa Astral Natal, Revolução Solar, Sinastria Relacional e Mapa Vocacional: escolha a leitura ideal para o seu momento.">
     <meta name="theme-color" content="#FAFAFA">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="pt_BR">
     <meta property="og:site_name" content="Maggessy Astrologia">
     <meta property="og:title" content="Maggessy Astrologia | Mapas">
-    <meta property="og:description" content="Mapa Astral Natal, Revolução Solar, Sinastria Relacional e Mapa Vocacional: escolha a leitura ideal para o seu momento.">
+    <meta property="og:description"
+        content="Mapa Astral Natal, Revolução Solar, Sinastria Relacional e Mapa Vocacional: escolha a leitura ideal para o seu momento.">
     <link rel="icon" href="../assets/icons/favicon_1.ico" type="image/x-icon">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
 
     <!-- Tailwind CSS (CDN) + configuração única compartilhada -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -27,371 +32,551 @@
     <script src="../assets/js/site-config.js"></script>
     <script src="../assets/js/main.js"></script>
 </head>
+
 <body class="text-navy font-sans antialiased min-h-screen flex flex-col">
 
-    <a href="#conteudo" class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[60] focus:bg-navy focus:text-offwhite focus:px-4 focus:py-2 focus:rounded">Pular para o conteúdo</a>
+    <a href="#conteudo"
+        class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[60] focus:bg-navy focus:text-offwhite focus:px-4 focus:py-2 focus:rounded">Pular
+        para o conteúdo</a>
 
     <!-- Navegação Atualizada com Dropdown de Mapas -->
-<header class="sticky top-0 z-50 w-full bg-offwhite/80 backdrop-blur-sm border-b border-navy/5">
-    <div class="w-full px-6 md:px-12 py-6 flex justify-between items-center max-w-7xl mx-auto">
-        <a href="home.html" class="font-serif text-2xl md:text-3xl text-navy tracking-wide">
-            Maggessy <span class="text-cosmic italic text-xl md:text-2xl">Astrologia</span>
-        </a>
+    <header class="sticky top-0 z-50 w-full bg-offwhite/80 backdrop-blur-sm border-b border-navy/5">
+        <div class="w-full px-6 md:px-12 py-6 flex justify-between items-center max-w-7xl mx-auto">
+            <a href="home.html" class="font-serif text-2xl md:text-3xl text-navy tracking-wide">
+                Maggessy <span class="text-cosmic italic text-xl md:text-2xl">Astrologia</span>
+            </a>
 
-        <!-- Menu desktop -->
-        <nav aria-label="Principal" class="hidden md:flex space-x-8 text-sm uppercase tracking-widest font-light text-navy/80 items-center">
-            <a href="home.html" class="nav-link hover:text-cosmic transition-colors">Home</a>
-            
-            <!-- Item com Dropdown (Mapas) -->
-            <div class="relative group h-full flex items-center py-4 -my-4">
-                <!-- Link Principal (Mapas) -->
-                <a href="maps.html" class="nav-link text-navy font-bold border-b border-navy flex items-center gap-1" aria-current="page">
-                    Mapas
-                    <svg class="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                </a>
-                
-                <!-- Dropdown Menu -->
-                <div class="absolute left-1/2 -translate-x-1/2 top-full w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-                    <!-- Espaçamento invisível (ponte) para o rato não perder o hover ao descer -->
-                    <div class="h-4 w-full"></div>
-                    
-                    <!-- Container do menu -->
-                    <div class="bg-white rounded-2xl shadow-xl border border-navy/10 p-3 flex flex-col gap-1 relative">
-                        <!-- Setinha decorativa apontando para cima -->
-                        <div class="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-white border-t border-l border-navy/10 rotate-45"></div>
-                        
-                        <!-- Opção: Natal -->
-                        <a href="maps/mapa-natal.html" class="flex items-center px-4 py-3 rounded-xl hover:bg-navy/5 transition-colors group/item relative z-10">
-                            <span class="w-2 h-2 rounded-full bg-cosmic mr-3 group-hover/item:scale-150 transition-transform duration-300 shadow-sm"></span>
-                            <span class="text-xs font-bold text-navy group-hover/item:text-cosmic transition-colors tracking-widest uppercase">Natal</span>
-                        </a>
-                        
-                        <!-- Opção: Retorno Solar -->
-                        <a href="maps/mapa-retorno-solar.html" class="flex items-center px-4 py-3 rounded-xl hover:bg-navy/5 transition-colors group/item relative z-10">
-                            <span class="w-2 h-2 rounded-full bg-gold mr-3 group-hover/item:scale-150 transition-transform duration-300 shadow-sm"></span>
-                            <span class="text-xs font-bold text-navy group-hover/item:text-gold-deep transition-colors tracking-widest uppercase">Retorno Solar</span>
-                        </a>
-                        
-                        <!-- Opção: Trânsito -->
-                        <a href="maps/mapa-transito.html" class="flex items-center px-4 py-3 rounded-xl hover:bg-navy/5 transition-colors group/item relative z-10">
-                            <span class="w-2 h-2 rounded-full bg-sky-500 mr-3 group-hover/item:scale-150 transition-transform duration-300 shadow-sm"></span>
-                            <span class="text-xs font-bold text-navy group-hover/item:text-sky-600 transition-colors tracking-widest uppercase">Trânsito</span>
-                        </a>
-                        
-                        <!-- Opção: Direcional -->
-                        <a href="maps/mapa-direcional.html" class="flex items-center px-4 py-3 rounded-xl hover:bg-navy/5 transition-colors group/item relative z-10">
-                            <span class="w-2 h-2 rounded-full bg-emerald-500 mr-3 group-hover/item:scale-150 transition-transform duration-300 shadow-sm"></span>
-                            <span class="text-xs font-bold text-navy group-hover/item:text-emerald-600 transition-colors tracking-widest uppercase">Direcional</span>
-                        </a>
+            <!-- Menu desktop -->
+            <nav aria-label="Principal"
+                class="hidden md:flex space-x-8 text-sm uppercase tracking-widest font-light text-navy/80 items-center">
+                <a href="home.html" class="nav-link hover:text-cosmic transition-colors">Home</a>
 
-                        <!-- Opção: Astrocartográfico -->
-                        <a href="maps/mapa-astrocartografico.html" class="flex items-center px-4 py-3 rounded-xl hover:bg-navy/5 transition-colors group/item relative z-10">
-                            <span class="w-2 h-2 rounded-full bg-twilight mr-3 group-hover/item:scale-150 transition-transform duration-300 shadow-sm"></span>
-                            <span class="text-xs font-bold text-navy group-hover/item:text-twilight-deep transition-colors tracking-widest uppercase">Astrocartográfico</span>
-                        </a>
-                        <!-- Opção: Sinastria -->
-                        <a href="maps/mapa-sinastria.html" class="flex items-center px-4 py-3 rounded-xl hover:bg-navy/5 transition-colors group/item relative z-10">
-                            <span class="w-2 h-2 rounded-full bg-rose-500 mr-3 group-hover/item:scale-150 transition-transform duration-300 shadow-sm"></span>
-                            <span class="text-xs font-bold text-navy group-hover/item:text-rose-600 transition-colors tracking-widest uppercase">Sinastria</span>
-                        </a>
+                <!-- Item com Dropdown (Mapas) -->
+                <div class="relative group h-full flex items-center py-4 -my-4">
+                    <!-- Link Principal (Mapas) -->
+                    <a href="maps.html" class="nav-link hover:text-cosmic transition-colors flex items-center gap-1"
+                        aria-current="page"> Mapas
+                        <svg class="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </a>
+
+                    <!-- Dropdown Menu -->
+                    <div
+                        class="absolute left-1/2 -translate-x-1/2 top-full w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                        <!-- Espaçamento invisível (ponte) para o rato não perder o hover ao descer -->
+                        <div class="h-4 w-full"></div>
+
+                        <!-- Container do menu -->
+                        <div
+                            class="bg-white rounded-2xl shadow-xl border border-navy/10 p-3 flex flex-col gap-1 relative">
+                            <!-- Setinha decorativa apontando para cima -->
+                            <div
+                                class="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-white border-t border-l border-navy/10 rotate-45">
+                            </div>
+
+                            <!-- Opção: Natal -->
+                            <a href="maps/mapa-natal.html"
+                                class="flex items-center px-4 py-3 rounded-xl hover:bg-navy/5 transition-colors group/item relative z-10">
+                                <span
+                                    class="w-2 h-2 rounded-full bg-cosmic mr-3 group-hover/item:scale-150 transition-transform duration-300 shadow-sm"></span>
+                                <span
+                                    class="text-xs font-bold text-navy group-hover/item:text-cosmic transition-colors tracking-widest uppercase">Natal</span>
+                            </a>
+
+                            <!-- Opção: Retorno Solar -->
+                            <a href="maps/mapa-retorno-solar.html"
+                                class="flex items-center px-4 py-3 rounded-xl hover:bg-navy/5 transition-colors group/item relative z-10">
+                                <span
+                                    class="w-2 h-2 rounded-full bg-gold mr-3 group-hover/item:scale-150 transition-transform duration-300 shadow-sm"></span>
+                                <span
+                                    class="text-xs font-bold text-navy group-hover/item:text-gold-deep transition-colors tracking-widest uppercase">Retorno
+                                    Solar</span>
+                            </a>
+
+                            <!-- Opção: Trânsito -->
+                            <a href="maps/mapa-transito.html"
+                                class="flex items-center px-4 py-3 rounded-xl hover:bg-navy/5 transition-colors group/item relative z-10">
+                                <span
+                                    class="w-2 h-2 rounded-full bg-sky-500 mr-3 group-hover/item:scale-150 transition-transform duration-300 shadow-sm"></span>
+                                <span
+                                    class="text-xs font-bold text-navy group-hover/item:text-sky-600 transition-colors tracking-widest uppercase">Trânsito</span>
+                            </a>
+
+                            <!-- Opção: Direcional -->
+                            <a href="maps/mapa-direcional.html"
+                                class="flex items-center px-4 py-3 rounded-xl hover:bg-navy/5 transition-colors group/item relative z-10">
+                                <span
+                                    class="w-2 h-2 rounded-full bg-emerald-500 mr-3 group-hover/item:scale-150 transition-transform duration-300 shadow-sm"></span>
+                                <span
+                                    class="text-xs font-bold text-navy group-hover/item:text-emerald-600 transition-colors tracking-widest uppercase">Direcional</span>
+                            </a>
+
+                            <!-- Opção: Astrocartográfico -->
+                            <a href="maps/mapa-astrocartografico.html"
+                                class="flex items-center px-4 py-3 rounded-xl hover:bg-navy/5 transition-colors group/item relative z-10">
+                                <span
+                                    class="w-2 h-2 rounded-full bg-twilight mr-3 group-hover/item:scale-150 transition-transform duration-300 shadow-sm"></span>
+                                <span
+                                    class="text-xs font-bold text-navy group-hover/item:text-twilight-deep transition-colors tracking-widest uppercase">Astrocartográfico</span>
+                            </a>
+                            <!-- Opção: Sinastria -->
+                            <a href="maps/mapa-sinastria.html"
+                                class="flex items-center px-4 py-3 rounded-xl hover:bg-navy/5 transition-colors group/item relative z-10">
+                                <span
+                                    class="w-2 h-2 rounded-full bg-rose-500 mr-3 group-hover/item:scale-150 transition-transform duration-300 shadow-sm"></span>
+                                <span
+                                    class="text-xs font-bold text-navy group-hover/item:text-rose-600 transition-colors tracking-widest uppercase">Sinastria</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            
-            <a href="about.html" class="nav-link hover:text-cosmic transition-colors">Sobre mim</a>
-            <a href="contact.html" class="nav-link hover:text-cosmic transition-colors">Contato</a>
-        </nav>
 
-        <!-- Botão do menu mobile -->
-        <button id="menu-toggle" type="button" class="md:hidden text-navy hover:text-gold transition" aria-label="Abrir menu">
-            <svg data-icon="open" aria-hidden="true" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"></path></svg>
-        </button>
-    </div>
-</header>
+                <a href="about.html" class="nav-link hover:text-cosmic transition-colors">Sobre mim</a>
+                <a href="contact.html" class="nav-link hover:text-cosmic transition-colors">Contato</a>
+            </nav>
+
+            <!-- Botão do menu mobile -->
+            <button id="menu-toggle" type="button" class="md:hidden text-navy hover:text-gold transition"
+                aria-label="Abrir menu">
+                <svg data-icon="open" aria-hidden="true" class="w-6 h-6" fill="none" stroke="currentColor"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
+                </svg>
+            </button>
+        </div>
+    </header>
 
     <main id="conteudo">
-    <!-- Cabeçalho da página -->
-    <section class="pt-16 pb-16 relative overflow-hidden text-center px-6">
-        <div aria-hidden="true" class="flex justify-center items-start gap-4 text-gold/30 mb-6">
-            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L14.5 9.5H22L16 14L18.5 21.5L12 17L5.5 21.5L8 14L2 9.5H9.5L12 2Z"/></svg>
-            <svg class="w-6 h-6 -mt-2" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L14.5 9.5H22L16 14L18.5 21.5L12 17L5.5 21.5L8 14L2 9.5H9.5L12 2Z"/></svg>
-            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L14.5 9.5H22L16 14L18.5 21.5L12 17L5.5 21.5L8 14L2 9.5H9.5L12 2Z"/></svg>
-        </div>
+        <!-- Cabeçalho da página -->
+        <section class="pt-16 pb-16 relative overflow-hidden text-center px-6">
+            <div aria-hidden="true" class="flex justify-center items-start gap-4 text-gold/30 mb-6">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2L14.5 9.5H22L16 14L18.5 21.5L12 17L5.5 21.5L8 14L2 9.5H9.5L12 2Z" />
+                </svg>
+                <svg class="w-6 h-6 -mt-2" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2L14.5 9.5H22L16 14L18.5 21.5L12 17L5.5 21.5L8 14L2 9.5H9.5L12 2Z" />
+                </svg>
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2L14.5 9.5H22L16 14L18.5 21.5L12 17L5.5 21.5L8 14L2 9.5H9.5L12 2Z" />
+                </svg>
+            </div>
 
-        <div class="max-w-3xl mx-auto relative z-10 animate-fade-in-up">
-            <span class="text-twilight-deep uppercase tracking-[0.2em] text-xs font-bold font-sans">Serviços Astrológicos</span>
-            <h1 class="font-serif text-4xl md:text-6xl text-navy mt-4 mb-6">Encontre o seu Mapa</h1>
-            <p class="font-sans text-navy/70 text-lg font-light leading-relaxed">
-                Escolha a leitura ideal para o seu momento de vida. Cada mapa é um mergulho profundo no seu universo particular, preparado com dedicação e exclusividade.
-            </p>
-        </div>
-    </section>
+            <div class="max-w-3xl mx-auto relative z-10 animate-fade-in-up">
+                <span class="text-twilight-deep uppercase tracking-[0.2em] text-xs font-bold font-sans">Serviços
+                    Astrológicos</span>
+                <h1 class="font-serif text-4xl md:text-6xl text-navy mt-4 mb-6">Encontre o seu Mapa</h1>
+                <p class="font-sans text-navy/70 text-lg font-light leading-relaxed">
+                    Escolha a leitura ideal para o seu momento de vida. Cada mapa é um mergulho profundo no seu universo
+                    particular, preparado com dedicação e exclusividade.
+                </p>
+            </div>
+        </section>
 
-    <!-- Mapas -->
-    <section class="py-12 bg-offwhite">
-        <div class="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Mapas -->
+        <section class="py-12 bg-offwhite">
+            <div class="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-8">
 
-            <!-- 1. Mapa Natal -->
-            <div id="natal" class="reveal" style="--reveal-delay: 0.0s;">
-                <div class="service-card group h-full bg-white p-8 md:p-12 rounded-xl border border-navy/10 hover:border-cosmic hover:shadow-cosmic/10 hover:shadow-xl transition-all duration-500 flex flex-col relative">
-                    <div class="flex justify-between items-start mb-6">
-                        <div class="w-12 h-12 rounded-full bg-navy/5 flex items-center justify-center card-icon transition-transform duration-500 text-cosmic">
-                            <svg aria-hidden="true" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <circle cx="12" cy="12" r="10" stroke-width="1.5" />
-                                <circle cx="12" cy="12" r="6" stroke-width="1.5" />
-                                <circle cx="12" cy="12" r="2" stroke-width="1.5" />
-                                <line x1="2" y1="12" x2="22" y2="12" stroke-width="1.5" />
-                                <line x1="12" y1="2" x2="12" y2="22" stroke-width="1.5" />
-                            </svg>
+                <!-- 1. Mapa Natal -->
+                <div id="natal" class="reveal" style="--reveal-delay: 0.0s;">
+                    <div
+                        class="service-card group h-full bg-white p-8 md:p-12 rounded-xl border border-navy/10 hover:border-cosmic hover:shadow-cosmic/10 hover:shadow-xl transition-all duration-500 flex flex-col relative">
+                        <div class="flex justify-between items-start mb-6">
+                            <div
+                                class="w-12 h-12 rounded-full bg-navy/5 flex items-center justify-center card-icon transition-transform duration-500 text-cosmic">
+                                <svg aria-hidden="true" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <circle cx="12" cy="12" r="10" stroke-width="1.5" />
+                                    <circle cx="12" cy="12" r="6" stroke-width="1.5" />
+                                    <circle cx="12" cy="12" r="2" stroke-width="1.5" />
+                                    <line x1="2" y1="12" x2="22" y2="12" stroke-width="1.5" />
+                                    <line x1="12" y1="2" x2="12" y2="22" stroke-width="1.5" />
+                                </svg>
+                            </div>
+                            <span
+                                class="text-xs font-bold uppercase tracking-widest text-navy/70 group-hover:text-cosmic transition-colors">Mais
+                                Procurado</span>
                         </div>
-                        <span class="text-xs font-bold uppercase tracking-widest text-navy/70 group-hover:text-cosmic transition-colors">Mais Procurado</span>
-                    </div>
 
-                    <h2 class="font-serif text-3xl text-navy mb-3">Mapa Natal</h2>
-                    <p class="font-sans text-navy/70 text-sm leading-relaxed mb-6 flex-grow">
-                        A base de tudo. Uma análise profunda sobre a sua personalidade, talentos naturais, desafios cármicos e propósito de vida. Entenda como os astros se posicionavam no momento exato do seu nascimento.
-                    </p>
+                        <h2 class="font-serif text-3xl text-navy mb-3">Mapa Natal</h2>
+                        <p class="font-sans text-navy/70 text-sm leading-relaxed mb-6 flex-grow">
+                            A base de tudo. Uma análise profunda sobre a sua personalidade, talentos naturais, desafios
+                            cármicos e propósito de vida. Entenda como os astros se posicionavam no momento exato do seu
+                            nascimento.
+                        </p>
 
-                    <div class="bg-offwhite border border-navy/5 rounded-lg p-4 mb-8">
-                        <h3 class="text-xs uppercase font-bold text-cosmic tracking-wider mb-2">O que pode incluir:</h3>
-                        <ul class="text-sm text-navy/70 space-y-1.5 font-light">
-                            <li class="flex items-center gap-2"><svg aria-hidden="true" class="w-4 h-4 text-cosmic" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Sessão online ao vivo (1h30)</li>
-                            <li class="flex items-center gap-2"><svg aria-hidden="true" class="w-4 h-4 text-cosmic" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Relatório completo em PDF</li>
-                            <li class="flex items-center gap-2"><svg aria-hidden="true" class="w-4 h-4 text-cosmic" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Gravação da consulta</li>
-                        </ul>
-                    </div>
-
-                    <a href="maps/mapa-natal.html" class="block w-full py-4 text-center border border-navy text-navy font-bold rounded-full hover:bg-cosmic hover:border-cosmic hover:text-offwhite transition-all duration-300 text-xs uppercase tracking-widest">
-                        Saiba Mais
-                    </a>
-                </div>
-            </div>
-
-            <!-- 2. Retorno Solar -->
-            <div id="solar" class="reveal" style="--reveal-delay: 0.1s;">
-                <div class="service-card group h-full bg-white p-8 md:p-12 rounded-xl border border-navy/10 hover:border-gold hover:shadow-gold/10 hover:shadow-xl transition-all duration-500 flex flex-col relative">
-                    <div class="flex justify-between items-start mb-6">
-                        <div class="w-12 h-12 rounded-full bg-navy/5 flex items-center justify-center card-icon transition-transform duration-500 text-gold-deep">
-                            <svg aria-hidden="true" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
-                            </svg>
+                        <div class="bg-offwhite border border-navy/5 rounded-lg p-4 mb-8">
+                            <h3 class="text-xs uppercase font-bold text-cosmic tracking-wider mb-2">O que pode incluir:
+                            </h3>
+                            <ul class="text-sm text-navy/70 space-y-1.5 font-light">
+                                <li class="flex items-center gap-2"><svg aria-hidden="true" class="w-4 h-4 text-cosmic"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7"></path>
+                                    </svg> Sessão online ao vivo (1h30)</li>
+                                <li class="flex items-center gap-2"><svg aria-hidden="true" class="w-4 h-4 text-cosmic"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7"></path>
+                                    </svg> Relatório completo em PDF</li>
+                                <li class="flex items-center gap-2"><svg aria-hidden="true" class="w-4 h-4 text-cosmic"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7"></path>
+                                    </svg> Gravação da consulta</li>
+                            </ul>
                         </div>
-                         <span class="text-xs font-bold uppercase tracking-widest text-navy/70 group-hover:text-gold-deep transition-colors">Mais Procurado</span>
+
+                        <a href="maps/mapa-natal.html"
+                            class="block w-full py-4 text-center border border-navy text-navy font-bold rounded-full hover:bg-cosmic hover:border-cosmic hover:text-offwhite transition-all duration-300 text-xs uppercase tracking-widest">
+                            Saiba Mais
+                        </a>
                     </div>
-
-                    <h2 class="font-serif text-3xl text-navy mb-3">Retorno Solar</h2>
-                    <p class="font-sans text-navy/70 text-sm leading-relaxed mb-6 flex-grow">
-                        O mapa do seu ano. Descubra as tendências, energias, oportunidades e desafios que guiarão a sua vida do seu próximo aniversário até o ano seguinte. Ideal para planejamento pessoal.
-                    </p>
-
-                    <div class="bg-offwhite border border-navy/5 rounded-lg p-4 mb-8">
-                        <h3 class="text-xs uppercase font-bold text-gold-deep tracking-wider mb-2">O que pode incluir:</h3>
-                        <ul class="text-sm text-navy/70 space-y-1.5 font-light">
-                            <li class="flex items-center gap-2"><svg aria-hidden="true" class="w-4 h-4 text-gold-deep" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Sessão online ao vivo (1h)</li>
-                            <li class="flex items-center gap-2"><svg aria-hidden="true" class="w-4 h-4 text-gold-deep" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Resumo dos trânsitos no ano</li>
-                            <li class="flex items-center gap-2"><svg aria-hidden="true" class="w-4 h-4 text-gold-deep" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Gravação da consulta</li>
-                        </ul>
-                    </div>
-
-                    <a href="maps/mapa-retorno-solar.html" class="block w-full py-4 text-center border border-navy text-navy font-bold rounded-full hover:bg-gold-deep hover:border-gold-deep hover:text-offwhite transition-all duration-300 text-xs uppercase tracking-widest">
-                        Saiba Mais
-                    </a>
                 </div>
-            </div>
 
-            <!-- 3. Mapa de Trânsito -->
-            <div id="transito" class="reveal" style="--reveal-delay: 0.0s;">
-                <div class="service-card group h-full bg-white p-8 md:p-12 rounded-xl border border-navy/10 hover:border-sky-700 hover:shadow-sky-700/10 hover:shadow-xl transition-all duration-500 flex flex-col relative">
-                    <div class="flex justify-between items-start mb-6">
-                        <div class="w-12 h-12 rounded-full bg-navy/5 flex items-center justify-center card-icon transition-transform duration-500 text-sky-700">
-                            <svg aria-hidden="true" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
-                            </svg>
+                <!-- 2. Retorno Solar -->
+                <div id="solar" class="reveal" style="--reveal-delay: 0.1s;">
+                    <div
+                        class="service-card group h-full bg-white p-8 md:p-12 rounded-xl border border-navy/10 hover:border-gold hover:shadow-gold/10 hover:shadow-xl transition-all duration-500 flex flex-col relative">
+                        <div class="flex justify-between items-start mb-6">
+                            <div
+                                class="w-12 h-12 rounded-full bg-navy/5 flex items-center justify-center card-icon transition-transform duration-500 text-gold-deep">
+                                <svg aria-hidden="true" class="w-6 h-6" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24" stroke-width="1.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <span
+                                class="text-xs font-bold uppercase tracking-widest text-navy/70 group-hover:text-gold-deep transition-colors">Mais
+                                Procurado</span>
                         </div>
-                    </div>
 
-                    <h2 class="font-serif text-3xl text-navy mb-3">Mapa de Trânsito</h2>
-                    <p class="font-sans text-navy/70 text-sm leading-relaxed mb-6 flex-grow">
-                        Compreenda as influências planetárias do momento e como elas se refletem na sua vida, revelando tendências e oportunidades para os próximos meses.
-                    </p>
+                        <h2 class="font-serif text-3xl text-navy mb-3">Retorno Solar</h2>
+                        <p class="font-sans text-navy/70 text-sm leading-relaxed mb-6 flex-grow">
+                            O mapa do seu ano. Descubra as tendências, energias, oportunidades e desafios que guiarão a
+                            sua vida do seu próximo aniversário até o ano seguinte. Ideal para planejamento pessoal.
+                        </p>
 
-                    <div class="bg-offwhite border border-navy/5 rounded-lg p-4 mb-8">
-                        <h3 class="text-xs uppercase font-bold text-sky-700 tracking-wider mb-2">O que pode incluir:</h3>
-                        <ul class="text-sm text-navy/70 space-y-1.5 font-light">
-                            <li class="flex items-center gap-2"><svg aria-hidden="true" class="w-4 h-4 text-sky-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Sessão online ao vivo (1h)</li>
-                            <li class="flex items-center gap-2"><svg aria-hidden="true" class="w-4 h-4 text-sky-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Análise de ciclos e timing</li>
-                            <li class="flex items-center gap-2"><svg aria-hidden="true" class="w-4 h-4 text-sky-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Gravação da consulta</li>
-                        </ul>
-                    </div>
-
-                    <a href="maps/mapa-transito.html" class="block w-full py-4 text-center border border-navy text-navy font-bold rounded-full hover:bg-sky-700 hover:border-sky-700 hover:text-offwhite transition-all duration-300 text-xs uppercase tracking-widest">
-                        Saiba Mais
-                    </a>
-                </div>
-            </div>
-
-            <!-- 4. Mapa AstroCartográfico -->
-            <div id="cartografico" class="reveal" style="--reveal-delay: 0.1s;">
-                <div class="service-card group h-full bg-white p-8 md:p-12 rounded-xl border border-navy/10 hover:border-twilight hover:shadow-twilight/10 hover:shadow-xl transition-all duration-500 flex flex-col relative">
-                    <div class="flex justify-between items-start mb-6">
-                        <div class="w-12 h-12 rounded-full bg-navy/5 flex items-center justify-center card-icon transition-transform duration-500 text-twilight">
-                            <svg aria-hidden="true" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-                                <circle cx="12" cy="12" r="10" />
-                                <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
-                            </svg>
+                        <div class="bg-offwhite border border-navy/5 rounded-lg p-4 mb-8">
+                            <h3 class="text-xs uppercase font-bold text-gold-deep tracking-wider mb-2">O que pode
+                                incluir:</h3>
+                            <ul class="text-sm text-navy/70 space-y-1.5 font-light">
+                                <li class="flex items-center gap-2"><svg aria-hidden="true"
+                                        class="w-4 h-4 text-gold-deep" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7"></path>
+                                    </svg> Sessão online ao vivo (1h)</li>
+                                <li class="flex items-center gap-2"><svg aria-hidden="true"
+                                        class="w-4 h-4 text-gold-deep" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7"></path>
+                                    </svg> Resumo dos trânsitos no ano</li>
+                                <li class="flex items-center gap-2"><svg aria-hidden="true"
+                                        class="w-4 h-4 text-gold-deep" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7"></path>
+                                    </svg> Gravação da consulta</li>
+                            </ul>
                         </div>
+
+                        <a href="maps/mapa-retorno-solar.html"
+                            class="block w-full py-4 text-center border border-navy text-navy font-bold rounded-full hover:bg-gold-deep hover:border-gold-deep hover:text-offwhite transition-all duration-300 text-xs uppercase tracking-widest">
+                            Saiba Mais
+                        </a>
                     </div>
-
-                    <h2 class="font-serif text-3xl text-navy mb-3">Mapa AstroCartográfico</h2>
-                    <p class="font-sans text-navy/70 text-sm leading-relaxed mb-6 flex-grow">
-                        Descubra os melhores lugares do mundo para viver, trabalhar ou viajar, alinhando a sua energia com as linhas planetárias globais.
-                    </p>
-
-                    <div class="bg-offwhite border border-navy/5 rounded-lg p-4 mb-8">
-                        <h3 class="text-xs uppercase font-bold text-twilight tracking-wider mb-2">O que pode incluir:</h3>
-                        <ul class="text-sm text-navy/70 space-y-1.5 font-light">
-                            <li class="flex items-center gap-2"><svg aria-hidden="true" class="w-4 h-4 text-twilight" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Sessão online ao vivo (1h)</li>
-                            <li class="flex items-center gap-2"><svg aria-hidden="true" class="w-4 h-4 text-twilight" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Análise de 3 localidades</li>
-                            <li class="flex items-center gap-2"><svg aria-hidden="true" class="w-4 h-4 text-twilight" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Gravação da consulta</li>
-                        </ul>
-                    </div>
-
-                    <a href="maps/mapa-astrocartografico.html" class="block w-full py-4 text-center border border-navy text-navy font-bold rounded-full hover:bg-twilight hover:border-twilight hover:text-offwhite transition-all duration-300 text-xs uppercase tracking-widest">
-                        Saiba Mais
-                    </a>
                 </div>
-            </div>
 
-            <!-- 5. Sinastria Amorosa -->
-            <div id="sinastria" class="reveal" style="--reveal-delay: 0.0s;">
-                <div class="service-card group h-full bg-white p-8 md:p-12 rounded-xl border border-navy/10 hover:border-rose-600 hover:shadow-rose-600/10 hover:shadow-xl transition-all duration-500 flex flex-col relative">
-                    <div class="flex justify-between items-start mb-6">
-                        <div class="w-12 h-12 rounded-full bg-navy/5 flex items-center justify-center card-icon transition-transform duration-500 text-rose-600">
-                            <svg aria-hidden="true" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-                                <circle cx="8.5" cy="12" r="6" />
-                                <circle cx="15.5" cy="12" r="6" />
-                            </svg>
+                <!-- 3. Mapa de Trânsito -->
+                <div id="transito" class="reveal" style="--reveal-delay: 0.0s;">
+                    <div
+                        class="service-card group h-full bg-white p-8 md:p-12 rounded-xl border border-navy/10 hover:border-sky-700 hover:shadow-sky-700/10 hover:shadow-xl transition-all duration-500 flex flex-col relative">
+                        <div class="flex justify-between items-start mb-6">
+                            <div
+                                class="w-12 h-12 rounded-full bg-navy/5 flex items-center justify-center card-icon transition-transform duration-500 text-sky-700">
+                                <svg aria-hidden="true" class="w-6 h-6" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24" stroke-width="1.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z">
+                                    </path>
+                                </svg>
+                            </div>
                         </div>
-                    </div>
 
-                    <h2 class="font-serif text-3xl text-navy mb-3">Sinastria Amorosa</h2>
-                    <p class="font-sans text-navy/70 text-sm leading-relaxed mb-6 flex-grow">
-                        Análise da compatibilidade entre duas pessoas. Compreenda a dinâmica, os desafios e os potenciais da sua relação afetiva.
-                    </p>
+                        <h2 class="font-serif text-3xl text-navy mb-3">Mapa de Trânsito</h2>
+                        <p class="font-sans text-navy/70 text-sm leading-relaxed mb-6 flex-grow">
+                            Compreenda as influências planetárias do momento e como elas se refletem na sua vida,
+                            revelando tendências e oportunidades para os próximos meses.
+                        </p>
 
-                    <div class="bg-offwhite border border-navy/5 rounded-lg p-4 mb-8">
-                        <h3 class="text-xs uppercase font-bold text-rose-600 tracking-wider mb-2">O que pode incluir:</h3>
-                        <ul class="text-sm text-navy/70 space-y-1.5 font-light">
-                            <li class="flex items-center gap-2"><svg aria-hidden="true" class="w-4 h-4 text-rose-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Sessão casal ou solo (1h45)</li>
-                            <li class="flex items-center gap-2"><svg aria-hidden="true" class="w-4 h-4 text-rose-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> PDF dinâmicas conjuntas</li>
-                            <li class="flex items-center gap-2"><svg aria-hidden="true" class="w-4 h-4 text-rose-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Gravação da consulta</li>
-                        </ul>
-                    </div>
-
-                    <a href="maps/mapa-sinastria.html" class="block w-full py-4 text-center border border-navy text-navy font-bold rounded-full hover:bg-rose-600 hover:border-rose-600 hover:text-offwhite transition-all duration-300 text-xs uppercase tracking-widest">
-                        Saiba Mais 
-                    </a>
-                </div>
-            </div>
-
-            <!-- 6. Mapa Direcional -->
-            <div id="direcional" class="reveal" style="--reveal-delay: 0.1s;">
-                <div class="service-card group h-full bg-white p-8 md:p-12 rounded-xl border border-navy/10 hover:border-emerald-600 hover:shadow-emerald-600/10 hover:shadow-xl transition-all duration-500 flex flex-col relative">
-                    <div class="flex justify-between items-start mb-6">
-                        <div class="w-12 h-12 rounded-full bg-navy/5 flex items-center justify-center card-icon transition-transform duration-500 text-emerald-600">
-                            <svg aria-hidden="true" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-                                <circle cx="12" cy="12" r="10" />
-                                <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76" />
-                            </svg>
+                        <div class="bg-offwhite border border-navy/5 rounded-lg p-4 mb-8">
+                            <h3 class="text-xs uppercase font-bold text-sky-700 tracking-wider mb-2">O que pode incluir:
+                            </h3>
+                            <ul class="text-sm text-navy/70 space-y-1.5 font-light">
+                                <li class="flex items-center gap-2"><svg aria-hidden="true" class="w-4 h-4 text-sky-700"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7"></path>
+                                    </svg> Sessão online ao vivo (1h)</li>
+                                <li class="flex items-center gap-2"><svg aria-hidden="true" class="w-4 h-4 text-sky-700"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7"></path>
+                                    </svg> Análise de ciclos e timing</li>
+                                <li class="flex items-center gap-2"><svg aria-hidden="true" class="w-4 h-4 text-sky-700"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7"></path>
+                                    </svg> Gravação da consulta</li>
+                            </ul>
                         </div>
+
+                        <a href="maps/mapa-transito.html"
+                            class="block w-full py-4 text-center border border-navy text-navy font-bold rounded-full hover:bg-sky-700 hover:border-sky-700 hover:text-offwhite transition-all duration-300 text-xs uppercase tracking-widest">
+                            Saiba Mais
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 4. Mapa AstroCartográfico -->
+                <div id="cartografico" class="reveal" style="--reveal-delay: 0.1s;">
+                    <div
+                        class="service-card group h-full bg-white p-8 md:p-12 rounded-xl border border-navy/10 hover:border-twilight hover:shadow-twilight/10 hover:shadow-xl transition-all duration-500 flex flex-col relative">
+                        <div class="flex justify-between items-start mb-6">
+                            <div
+                                class="w-12 h-12 rounded-full bg-navy/5 flex items-center justify-center card-icon transition-transform duration-500 text-twilight">
+                                <svg aria-hidden="true" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor" stroke-width="1.5">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <path
+                                        d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                                </svg>
+                            </div>
+                        </div>
+
+                        <h2 class="font-serif text-3xl text-navy mb-3">Mapa AstroCartográfico</h2>
+                        <p class="font-sans text-navy/70 text-sm leading-relaxed mb-6 flex-grow">
+                            Descubra os melhores lugares do mundo para viver, trabalhar ou viajar, alinhando a sua
+                            energia com as linhas planetárias globais.
+                        </p>
+
+                        <div class="bg-offwhite border border-navy/5 rounded-lg p-4 mb-8">
+                            <h3 class="text-xs uppercase font-bold text-twilight tracking-wider mb-2">O que pode
+                                incluir:</h3>
+                            <ul class="text-sm text-navy/70 space-y-1.5 font-light">
+                                <li class="flex items-center gap-2"><svg aria-hidden="true"
+                                        class="w-4 h-4 text-twilight" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7"></path>
+                                    </svg> Sessão online ao vivo (1h)</li>
+                                <li class="flex items-center gap-2"><svg aria-hidden="true"
+                                        class="w-4 h-4 text-twilight" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7"></path>
+                                    </svg> Análise de 3 localidades</li>
+                                <li class="flex items-center gap-2"><svg aria-hidden="true"
+                                        class="w-4 h-4 text-twilight" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7"></path>
+                                    </svg> Gravação da consulta</li>
+                            </ul>
+                        </div>
+
+                        <a href="maps/mapa-astrocartografico.html"
+                            class="block w-full py-4 text-center border border-navy text-navy font-bold rounded-full hover:bg-twilight hover:border-twilight hover:text-offwhite transition-all duration-300 text-xs uppercase tracking-widest">
+                            Saiba Mais
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 5. Sinastria Amorosa -->
+                <div id="sinastria" class="reveal" style="--reveal-delay: 0.0s;">
+                    <div
+                        class="service-card group h-full bg-white p-8 md:p-12 rounded-xl border border-navy/10 hover:border-rose-600 hover:shadow-rose-600/10 hover:shadow-xl transition-all duration-500 flex flex-col relative">
+                        <div class="flex justify-between items-start mb-6">
+                            <div
+                                class="w-12 h-12 rounded-full bg-navy/5 flex items-center justify-center card-icon transition-transform duration-500 text-rose-600">
+                                <svg aria-hidden="true" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor" stroke-width="1.5">
+                                    <circle cx="8.5" cy="12" r="6" />
+                                    <circle cx="15.5" cy="12" r="6" />
+                                </svg>
+                            </div>
+                        </div>
+
+                        <h2 class="font-serif text-3xl text-navy mb-3">Sinastria Amorosa</h2>
+                        <p class="font-sans text-navy/70 text-sm leading-relaxed mb-6 flex-grow">
+                            Análise da compatibilidade entre duas pessoas. Compreenda a dinâmica, os desafios e os
+                            potenciais da sua relação afetiva.
+                        </p>
+
+                        <div class="bg-offwhite border border-navy/5 rounded-lg p-4 mb-8">
+                            <h3 class="text-xs uppercase font-bold text-rose-600 tracking-wider mb-2">O que pode
+                                incluir:</h3>
+                            <ul class="text-sm text-navy/70 space-y-1.5 font-light">
+                                <li class="flex items-center gap-2"><svg aria-hidden="true"
+                                        class="w-4 h-4 text-rose-600" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7"></path>
+                                    </svg> Sessão casal ou solo (1h45)</li>
+                                <li class="flex items-center gap-2"><svg aria-hidden="true"
+                                        class="w-4 h-4 text-rose-600" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7"></path>
+                                    </svg> PDF dinâmicas conjuntas</li>
+                                <li class="flex items-center gap-2"><svg aria-hidden="true"
+                                        class="w-4 h-4 text-rose-600" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7"></path>
+                                    </svg> Gravação da consulta</li>
+                            </ul>
+                        </div>
+
+                        <a href="maps/mapa-sinastria.html"
+                            class="block w-full py-4 text-center border border-navy text-navy font-bold rounded-full hover:bg-rose-600 hover:border-rose-600 hover:text-offwhite transition-all duration-300 text-xs uppercase tracking-widest">
+                            Saiba Mais
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 6. Mapa Direcional -->
+                <div id="direcional" class="reveal" style="--reveal-delay: 0.1s;">
+                    <div
+                        class="service-card group h-full bg-white p-8 md:p-12 rounded-xl border border-navy/10 hover:border-emerald-600 hover:shadow-emerald-600/10 hover:shadow-xl transition-all duration-500 flex flex-col relative">
+                        <div class="flex justify-between items-start mb-6">
+                            <div
+                                class="w-12 h-12 rounded-full bg-navy/5 flex items-center justify-center card-icon transition-transform duration-500 text-emerald-600">
+                                <svg aria-hidden="true" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor" stroke-width="1.5">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76" />
+                                </svg>
+                            </div>
+                        </div>
+
+                        <h2 class="font-serif text-3xl text-navy mb-3">Mapa Direcional</h2>
+                        <p class="font-sans text-navy/70 text-sm leading-relaxed mb-6">
+                            Compreenda áreas essenciais da sua jornada através de modalidades direcionadas.
+                        </p>
+
+                        <div class="bg-offwhite border border-navy/5 rounded-lg p-4 mb-8 flex-grow">
+                            <h3 class="text-xs uppercase font-bold text-emerald-600 tracking-wider mb-2">Modalidades:
+                            </h3>
+                            <ul class="text-sm text-navy/70 space-y-2 font-light">
+                                <li class="flex items-start gap-2">
+                                    <span class="w-1.5 h-1.5 bg-rose-500 rounded-full mt-1.5 shrink-0"></span>
+                                    <span><strong class="font-bold text-rose-500">Amor:</strong> Compreenda seus padrões
+                                        e potenciais afetivos.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="w-1.5 h-1.5 bg-sky-600 rounded-full mt-1.5 shrink-0"></span>
+                                    <span><strong class="font-bold text-sky-600">Vocacional:</strong> Alinhe seus
+                                        talentos únicos à sua carreira.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="w-1.5 h-1.5 bg-emerald-500 rounded-full mt-1.5 shrink-0"></span>
+                                    <span><strong class="font-bold text-emerald-500">Saúde:</strong> Vitalidade e
+                                        equilíbrio físico-mental.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="w-1.5 h-1.5 bg-gold-deep rounded-full mt-1.5 shrink-0"></span>
+                                    <span><strong class="font-bold text-gold-deep">Prosperidade:</strong> Caminhos para
+                                        a abundância material.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="w-1.5 h-1.5 bg-cosmic rounded-full mt-1.5 shrink-0"></span>
+                                    <span><strong class="font-bold text-cosmic">Espiritual:</strong> Conexão profunda
+                                        com o seu propósito de alma.</span>
+                            </ul>
+                        </div>
+
+                        <a href="maps/mapa-direcional.html"
+                            class="block w-full py-4 text-center border border-navy text-navy font-bold rounded-full hover:bg-emerald-600 hover:border-emerald-600 hover:text-offwhite transition-all duration-300 text-xs uppercase tracking-widest mt-auto">
+                            Saiba Mais
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Como funciona -->
+        <section class="py-24 bg-white relative">
+            <div class="max-w-6xl mx-auto px-6 md:px-12 text-center">
+
+                <div class="mb-16 reveal">
+                    <span class="text-twilight-deep uppercase tracking-[0.2em] text-xs font-bold font-sans">Passo a
+                        Passo</span>
+                    <h2 class="font-serif text-3xl md:text-5xl text-navy mt-4">Como funciona a consulta?</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
+                    <!-- Conector (somente desktop) -->
+                    <div aria-hidden="true"
+                        class="hidden md:block absolute top-12 left-[15%] right-[15%] h-px border-t border-dashed border-navy/20">
                     </div>
 
-                    <h2 class="font-serif text-3xl text-navy mb-3">Mapa Direcional</h2>
-                    <p class="font-sans text-navy/70 text-sm leading-relaxed mb-6">
-                        Compreenda áreas essenciais da sua jornada através de modalidades direcionadas.
-                    </p>
-
-                    <div class="bg-offwhite border border-navy/5 rounded-lg p-4 mb-8 flex-grow">
-                        <h3 class="text-xs uppercase font-bold text-emerald-600 tracking-wider mb-2">Modalidades:</h3>
-                        <ul class="text-sm text-navy/70 space-y-2 font-light">
-                            <li class="flex items-start gap-2">
-                                <span class="w-1.5 h-1.5 bg-rose-500 rounded-full mt-1.5 shrink-0"></span>
-                                <span><strong class="font-bold text-rose-500">Amor:</strong> Compreenda seus padrões e potenciais afetivos.</span>
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <span class="w-1.5 h-1.5 bg-sky-600 rounded-full mt-1.5 shrink-0"></span>
-                                <span><strong class="font-bold text-sky-600">Vocacional:</strong> Alinhe seus talentos únicos à sua carreira.</span>
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <span class="w-1.5 h-1.5 bg-emerald-500 rounded-full mt-1.5 shrink-0"></span>
-                                <span><strong class="font-bold text-emerald-500">Saúde:</strong> Vitalidade e equilíbrio físico-mental.</span>
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <span class="w-1.5 h-1.5 bg-gold-deep rounded-full mt-1.5 shrink-0"></span>
-                                <span><strong class="font-bold text-gold-deep">Prosperidade:</strong> Caminhos para a abundância material.</span>
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <span class="w-1.5 h-1.5 bg-cosmic rounded-full mt-1.5 shrink-0"></span>
-                                <span><strong class="font-bold text-cosmic">Espiritual:</strong> Conexão profunda com o seu propósito de alma.</span>
-                        </ul>
+                    <div class="reveal relative z-10 flex flex-col items-center" style="--reveal-delay: 0.0s;">
+                        <div
+                            class="w-24 h-24 rounded-full bg-offwhite border border-gold flex items-center justify-center text-3xl font-serif text-gold mb-6 shadow-sm">
+                            1</div>
+                        <h3 class="font-serif text-xl text-navy mb-2">Escolha e Agende</h3>
+                        <p class="font-sans text-sm text-navy/70 font-light leading-relaxed px-4">
+                            Selecione o mapa que melhor atende ao seu momento e marque uma consulta.
+                        </p>
                     </div>
-
-                    <a href="maps/mapa-direcional.html" class="block w-full py-4 text-center border border-navy text-navy font-bold rounded-full hover:bg-emerald-600 hover:border-emerald-600 hover:text-offwhite transition-all duration-300 text-xs uppercase tracking-widest mt-auto">
-                        Saiba Mais
-                    </a>
+                    <div class="reveal relative z-10 flex flex-col items-center" style="--reveal-delay: 0.1s;">
+                        <div
+                            class="w-24 h-24 rounded-full bg-offwhite border border-cosmic flex items-center justify-center text-3xl font-serif text-cosmic mb-6 shadow-sm">
+                            2</div>
+                        <h3 class="font-serif text-xl text-navy mb-2">Envie seus Dados</h3>
+                        <p class="font-sans text-sm text-navy/70 font-light leading-relaxed px-4">
+                            Precisarei da sua Data, Horário exato (veja na certidão de nascimento), Cidade e Estado de
+                            nascimento.
+                        </p>
+                    </div>
+                    <div class="reveal relative z-10 flex flex-col items-center" style="--reveal-delay: 0.2s;">
+                        <div
+                            class="w-24 h-24 rounded-full bg-offwhite border border-twilight flex items-center justify-center text-3xl font-serif text-twilight-deep mb-6 shadow-sm">
+                            3</div>
+                        <h3 class="font-serif text-xl text-navy mb-2">Sessão e Entrega</h3>
+                        <p class="font-sans text-sm text-navy/70 font-light leading-relaxed px-4">
+                            Nos encontraremos ao vivo via Google Meet. Após a sessão, você receberá a gravação* e o
+                            material em PDF.
+                        </p>
+                    </div>
                 </div>
+
             </div>
-
-        </div>
-    </section>
-
-    <!-- Como funciona -->
-    <section class="py-24 bg-white relative">
-        <div class="max-w-6xl mx-auto px-6 md:px-12 text-center">
-
-            <div class="mb-16 reveal">
-                <span class="text-twilight-deep uppercase tracking-[0.2em] text-xs font-bold font-sans">Passo a Passo</span>
-                <h2 class="font-serif text-3xl md:text-5xl text-navy mt-4">Como funciona a consulta?</h2>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
-                <!-- Conector (somente desktop) -->
-                <div aria-hidden="true" class="hidden md:block absolute top-12 left-[15%] right-[15%] h-px border-t border-dashed border-navy/20"></div>
-
-                <div class="reveal relative z-10 flex flex-col items-center" style="--reveal-delay: 0.0s;">
-                    <div class="w-24 h-24 rounded-full bg-offwhite border border-gold flex items-center justify-center text-3xl font-serif text-gold mb-6 shadow-sm">1</div>
-                    <h3 class="font-serif text-xl text-navy mb-2">Escolha e Agende</h3>
-                    <p class="font-sans text-sm text-navy/70 font-light leading-relaxed px-4">
-                        Selecione o mapa que melhor atende ao seu momento e marque uma consulta.
-                    </p>
-                </div>
-                <div class="reveal relative z-10 flex flex-col items-center" style="--reveal-delay: 0.1s;">
-                    <div class="w-24 h-24 rounded-full bg-offwhite border border-cosmic flex items-center justify-center text-3xl font-serif text-cosmic mb-6 shadow-sm">2</div>
-                    <h3 class="font-serif text-xl text-navy mb-2">Envie seus Dados</h3>
-                    <p class="font-sans text-sm text-navy/70 font-light leading-relaxed px-4">
-                        Precisarei da sua Data, Horário exato (veja na certidão de nascimento), Cidade e Estado de nascimento.
-                    </p>
-                </div>
-                <div class="reveal relative z-10 flex flex-col items-center" style="--reveal-delay: 0.2s;">
-                    <div class="w-24 h-24 rounded-full bg-offwhite border border-twilight flex items-center justify-center text-3xl font-serif text-twilight-deep mb-6 shadow-sm">3</div>
-                    <h3 class="font-serif text-xl text-navy mb-2">Sessão e Entrega</h3>
-                    <p class="font-sans text-sm text-navy/70 font-light leading-relaxed px-4">
-                        Nos encontraremos ao vivo via Google Meet. Após a sessão, você receberá a gravação* e o material em PDF.
-                    </p>
-                </div>
-            </div>
-
-        </div>
-    </section>
+        </section>
     </main>
 
     <!-- Rodapé -->
     <footer class="w-full border-t border-navy/5 py-10 text-center relative mt-auto bg-offwhite">
         <div class="max-w-7xl mx-auto px-6 flex flex-col items-center justify-center">
             <div aria-hidden="true" class="flex gap-2 mb-5 text-gold/40">
-                <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L14.5 9.5H22L16 14L18.5 21.5L12 17L5.5 21.5L8 14L2 9.5H9.5L12 2Z"/></svg>
-                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L14.5 9.5H22L16 14L18.5 21.5L12 17L5.5 21.5L8 14L2 9.5H9.5L12 2Z"/></svg>
-                <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L14.5 9.5H22L16 14L18.5 21.5L12 17L5.5 21.5L8 14L2 9.5H9.5L12 2Z"/></svg>
+                <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2L14.5 9.5H22L16 14L18.5 21.5L12 17L5.5 21.5L8 14L2 9.5H9.5L12 2Z" />
+                </svg>
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2L14.5 9.5H22L16 14L18.5 21.5L12 17L5.5 21.5L8 14L2 9.5H9.5L12 2Z" />
+                </svg>
+                <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2L14.5 9.5H22L16 14L18.5 21.5L12 17L5.5 21.5L8 14L2 9.5H9.5L12 2Z" />
+                </svg>
             </div>
             <a href="home.html" class="font-serif text-xl text-navy tracking-wide mb-3">Maggessy Astrologia</a>
             <p class="font-sans text-navy/70 text-xs tracking-wider uppercase">
@@ -401,4 +586,5 @@
     </footer>
 
 </body>
+
 </html>
