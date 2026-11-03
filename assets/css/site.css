@@ -89,21 +89,32 @@ body {
   .js .reveal.is-visible { opacity: 1; animation: none; }
 }
 
-
 #voltar-ao-conteudo {
     animation: mostrar-botao linear both;
     animation-timeline: scroll();
-    animation-range: 300px 800px;
+    animation-range: 500px 1200px;
 }
 
 @keyframes mostrar-botao {
-    from {
+    0% {
         opacity: 0;
         visibility: hidden;
+        pointer-events: none;
     }
 
-    to {
+    1% {
+        pointer-events: auto;
+    }
+
+    100% {
         opacity: 1;
         visibility: visible;
+        pointer-events: auto;
     }
+}
+
+#voltar-ao-conteudo:focus,
+#voltar-ao-conteudo:active {
+    background-color: inherit;
+    color: inherit;
 }
