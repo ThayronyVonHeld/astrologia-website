@@ -1,0 +1,144 @@
+<!-- Navegação (dropdown de Mapas + menu mobile) -->
+    <header class="sticky top-0 z-50 w-full bg-offwhite/80 backdrop-blur-sm border-b border-navy/5">
+        <div class="w-full px-6 md:px-12 py-6 flex justify-between items-center max-w-7xl mx-auto">
+            <a href="home.html" class="font-serif text-2xl md:text-3xl text-navy tracking-wide">
+                Maggessy <span class="text-cosmic italic text-xl md:text-2xl">Astrologia</span>
+            </a>
+
+            <!-- Menu desktop -->
+            <nav aria-label="Principal"
+                class="hidden md:flex space-x-8 text-sm uppercase tracking-widest font-light text-navy/80 items-center">
+                <a href="home.html" class="nav-link hover:text-cosmic transition-colors" aria-current="true">Home</a>
+
+                <!-- Item com dropdown (Mapas): abre com hover OU foco de teclado -->
+                <div class="relative group h-full flex items-center py-4 -my-4">
+                    <a href="maps.html" class="nav-link text-cosmic flex items-center gap-1">
+                        Mapas
+                        <svg aria-hidden="true"
+                            class="w-4 h-4 transition-transform duration-300 group-hover:rotate-180 group-focus-within:rotate-180"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </a>
+
+                    <!-- Dropdown Desktop -->
+                    <div
+                        class="absolute left-1/2 -translate-x-1/2 top-full w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible transition-all duration-300 z-50">
+                        <div class="h-4 w-full"></div>
+                        <div
+                            class="bg-white rounded-2xl shadow-xl border border-navy/10 p-3 flex flex-col gap-1 relative">
+                            <div aria-hidden="true"
+                                class="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-white border-t border-l border-navy/10 rotate-45">
+                            </div>
+                            <a href="maps/mapa-natal.html"
+                                class="flex items-center px-4 py-3 rounded-xl hover:bg-navy/5 focus-visible:bg-navy/5 focus-visible:outline-none transition-colors group/item relative z-10">
+                                <span
+                                    class="w-2 h-2 rounded-full bg-cosmic mr-3 group-hover/item:scale-150 transition-transform duration-300 shadow-sm"></span>
+                                <span
+                                    class="text-xs font-bold text-navy group-hover/item:text-cosmic-deep transition-colors tracking-widest uppercase">Natal</span>
+                            </a>
+                            <a href="maps/mapa-retorno-solar.html"
+                                class="flex items-center px-4 py-3 rounded-xl hover:bg-navy/5 focus-visible:bg-navy/5 focus-visible:outline-none transition-colors group/item relative z-10">
+                                <span
+                                    class="w-2 h-2 rounded-full bg-gold mr-3 group-hover/item:scale-150 transition-transform duration-300 shadow-sm"></span>
+                                <span
+                                    class="text-xs font-bold text-navy group-hover/item:text-gold-deep transition-colors tracking-widest uppercase">Retorno
+                                    Solar</span>
+                            </a>
+                            <a href="maps/mapa-transito.html"
+                                class="flex items-center px-4 py-3 rounded-xl hover:bg-navy/5 focus-visible:bg-navy/5 focus-visible:outline-none transition-colors group/item relative z-10">
+                                <span
+                                    class="w-2 h-2 rounded-full bg-ocean mr-3 group-hover/item:scale-150 transition-transform duration-300 shadow-sm"></span>
+                                <span
+                                    class="text-xs font-bold text-navy group-hover/item:text-ocean-deep transition-colors tracking-widest uppercase">Trânsito</span>
+                            </a>
+                            <a href="maps/mapa-astrocartografico.html"
+                                class="flex items-center px-4 py-3 rounded-xl hover:bg-navy/5 focus-visible:bg-navy/5 focus-visible:outline-none transition-colors group/item relative z-10">
+                                <span
+                                    class="w-2 h-2 rounded-full bg-twilight mr-3 group-hover/item:scale-150 transition-transform duration-300 shadow-sm"></span>
+                                <span
+                                    class="text-xs font-bold text-navy group-hover/item:text-twilight-deep transition-colors tracking-widest uppercase">Astrocartográfico</span>
+                            </a>
+                            <a href="maps/mapa-sinastria.html"
+                                class="flex items-center px-4 py-3 rounded-xl hover:bg-navy/5 focus-visible:bg-navy/5 focus-visible:outline-none transition-colors group/item relative z-10">
+                                <span
+                                    class="w-2 h-2 rounded-full bg-ruby mr-3 group-hover/item:scale-150 transition-transform duration-300 shadow-sm"></span>
+                                <span
+                                    class="text-xs font-bold text-navy group-hover/item:text-ruby-deep transition-colors tracking-widest uppercase">Sinastria</span>
+                            </a>
+                            <a href="maps/mapa-direcional.html"
+                                class="flex items-center px-4 py-3 rounded-xl hover:bg-navy/5 focus-visible:bg-navy/5 focus-visible:outline-none transition-colors group/item relative z-10">
+                                <span
+                                    class="w-2 h-2 rounded-full bg-jade mr-3 group-hover/item:scale-150 transition-transform duration-300 shadow-sm"></span>
+                                <span
+                                    class="text-xs font-bold text-navy group-hover/item:text-jade-deep transition-colors tracking-widest uppercase">Direcional</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="about.html" class="nav-link hover:text-cosmic transition-colors">Sobre mim</a>
+                <a href="contact.html" class="nav-link hover:text-cosmic transition-colors">Contato</a>
+            </nav>
+
+            <!-- Botão do menu mobile (aberto/fechado por assets/js/main.js) -->
+            <button id="menu-toggle" type="button" class="md:hidden text-navy hover:text-gold transition"
+                aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu">
+                <svg data-icon="open" aria-hidden="true" class="w-6 h-6" fill="none" stroke="currentColor"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
+                </svg>
+                <svg data-icon="close" aria-hidden="true" class="w-6 h-6 hidden" fill="none" stroke="currentColor"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 6l12 12M18 6L6 18">
+                    </path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Menu mobile -->
+        <nav id="mobile-menu" aria-label="Principal (mobile)"
+            class="hidden md:hidden border-t border-navy/5 px-6 pb-4 text-sm uppercase tracking-widest font-light text-navy/80">
+            <a href="home.html" class="block py-3 hover:text-cosmic" aria-current="true">Home</a>
+
+            <!-- Accordion Mapas Mobile -->
+            <div class="relative group/mobile-dropdown">
+                <!-- Botão expansível -->
+                <button type="button"
+                    class="w-full flex items-center justify-between py-3 text-cosmic focus:outline-none"
+                    aria-expanded="false"
+                    onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('svg').classList.toggle('rotate-180')">
+                    <span class="flex items-center gap-2 uppercase">
+                        <a href="maps.html" class="block py-3 hover:text-cosmic">Mapas</a>
+                    </span>
+                    <svg class="w-5 h-5 transition-transform duration-300" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+
+                <!-- Lista recolhível -->
+                <div class="hidden ml-1 mb-1 pl-4 border-l border-navy/10 overflow-hidden transition-all duration-300">
+                    <a href="maps/mapa-natal.html" class="flex items-center py-3 text-xs hover:text-cosmic"><span
+                            class="w-2 h-2 rounded-full bg-cosmic mr-3"></span>Natal</a>
+                    <a href="maps/mapa-retorno-solar.html"
+                        class="flex items-center py-3 text-xs hover:text-cosmic"><span
+                            class="w-2 h-2 rounded-full bg-gold mr-3"></span>Retorno Solar</a>
+                    <a href="maps/mapa-transito.html" class="flex items-center py-3 text-xs hover:text-cosmic"><span
+                            class="w-2 h-2 rounded-full bg-ocean mr-3"></span>Trânsito</a>
+                    <a href="maps/mapa-astrocartografico.html"
+                        class="flex items-center py-3 text-xs hover:text-cosmic"><span
+                            class="w-2 h-2 rounded-full bg-twilight mr-3"></span>Astrocartográfico</a>
+                    <a href="maps/mapa-sinastria.html" class="flex items-center py-3 text-xs hover:text-cosmic"><span
+                            class="w-2 h-2 rounded-full bg-ruby mr-3"></span>Sinastria</a>
+                    <a href="maps/mapa-direcional.html" class="flex items-center py-3 text-xs hover:text-cosmic"><span
+                            class="w-2 h-2 rounded-full bg-jade mr-3"></span>Direcional</a>
+                </div>
+            </div>
+
+            <a href="about.html" class="block py-3 hover:text-cosmic">Sobre mim</a>
+            <a href="contact.html" class="block py-3 hover:text-cosmic">Contato</a>
+        </nav>
+    </header>
