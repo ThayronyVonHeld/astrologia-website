@@ -7,7 +7,12 @@
     <title>Maggessy Astrologia | Mapa Direcional</title>
     <meta name="description"
         content="Aprofunde-se no conhecimento do seu Mapa Direcional e explore os caminhos para a sua evolução no amor, vocação, saúde, prosperidade e espiritualidade.">
-    <meta name="theme-color" content="#FAFAFA">
+    <meta name="theme-color" content="#FAF9F6">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="Maggessy Astrologia">
+    <meta property="og:title" content="Maggessy Astrologia | Mapa Direcional">
+    <meta property="og:description" content="Aprofunde-se no conhecimento do seu Mapa Direcional e explore os caminhos para a sua evolução no amor, vocação, saúde, prosperidade e espiritualidade.">
     <link rel="icon" href="../../assets/icons/favicon_1.ico" type="image/x-icon">
 
     <!-- Google Fonts -->
@@ -19,58 +24,12 @@
 
     <!-- Tailwind CSS (CDN) -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        navy: '#101B35',
-                        cosmic: '#4A2E65',
-                        gold: '#D4AF37',
-                        'gold-deep': '#B8960C',
-                        twilight: '#D87093',
-                        'twilight-deep': '#B05070',
-                        offwhite: '#FAF9F6',
-                        emerald: {
-                            500: '#10b981',
-                            600: '#059669',
-                        }
-                    },
-                    fontFamily: {
-                        serif: ['"Playfair Display"', 'serif'],
-                        sans: ['Lato', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        .animate-spin-slow {
-            animation: spin 20s linear infinite;
-        }
+    <script src="../../assets/js/tailwind-config.js"></script>
 
-        .animate-spin-slow-reverse {
-            animation: spin-reverse 25s linear infinite;
-        }
-
-        @keyframes spin-reverse {
-            from {
-                transform: rotate(360deg);
-            }
-
-            to {
-                transform: rotate(0deg);
-            }
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            background-color: #FAF9F6;
-        }
-    </style>
+    <!-- Estilos e scripts compartilhados (menu mobile, links do WhatsApp) -->
+    <link rel="stylesheet" href="../../assets/css/site.css">
+    <script src="../../assets/js/site-config.js"></script>
+    <script src="../../assets/js/main.js"></script>
 </head>
 
 <body class="text-navy font-sans antialiased min-h-screen flex flex-col">
@@ -80,117 +39,96 @@
         para o conteúdo</a>
 
 
-    <!-- Navegação Atualizada com Dropdown de Mapas -->
+    <!-- Navegação (dropdown de Mapas + menu mobile) -->
     <header class="sticky top-0 z-50 w-full bg-offwhite/80 backdrop-blur-sm border-b border-navy/5">
         <div class="w-full px-6 md:px-12 py-6 flex justify-between items-center max-w-7xl mx-auto">
             <a href="../home.html" class="font-serif text-2xl md:text-3xl text-navy tracking-wide">
                 Maggessy <span class="text-cosmic italic text-xl md:text-2xl">Astrologia</span>
             </a>
-
+    
             <!-- Menu desktop -->
-            <nav aria-label="Principal"
-                class="hidden md:flex space-x-8 text-sm uppercase tracking-widest font-light text-navy/80 items-center">
+            <nav aria-label="Principal" class="hidden md:flex space-x-8 text-sm uppercase tracking-widest font-light text-navy/80 items-center">
                 <a href="../home.html" class="nav-link hover:text-cosmic transition-colors">Home</a>
-
-                <!-- Item com Dropdown (Mapas) -->
+    
+                <!-- Item com dropdown (Mapas): abre com hover OU foco de teclado -->
                 <div class="relative group h-full flex items-center py-4 -my-4">
-                    <!-- Link Principal (Mapas) -->
-                    <a href="../maps.html"
-                        class="nav-link text-emerald-600 border-b border-emerald-600 flex items-center gap-1"
-                        aria-current="page">
+                    <a href="../maps.html" class="nav-link text-cosmic flex items-center gap-1" aria-current="true">
                         Mapas
-                        <svg class="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" fill="none"
-                            stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
-                            </path>
-                        </svg>
+                        <svg aria-hidden="true" class="w-4 h-4 transition-transform duration-300 group-hover:rotate-180 group-focus-within:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </a>
-
-                    <!-- Dropdown Menu -->
-                    <div
-                        class="absolute left-1/2 -translate-x-1/2 top-full w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-                        <!-- Espaçamento invisível (ponte) para o rato não perder o hover ao descer -->
+    
+                    <!-- Dropdown -->
+                    <div class="absolute left-1/2 -translate-x-1/2 top-full w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible transition-all duration-300 z-50">
+                        <!-- Ponte invisível para o mouse não perder o hover ao descer -->
                         <div class="h-4 w-full"></div>
-
-                        <!-- Container do menu -->
-                        <div
-                            class="bg-white rounded-2xl shadow-xl border border-navy/10 p-3 flex flex-col gap-1 relative">
-                            <!-- Setinha decorativa apontando para cima -->
-                            <div
-                                class="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-white border-t border-l border-navy/10 rotate-45">
-                            </div>
-
-                            <!-- Opção: Natal -->
-                            <a href="mapa-natal.html"
-                                class="flex items-center px-4 py-3 rounded-xl hover:bg-navy/5 transition-colors group/item relative z-10">
-                                <span
-                                    class="w-2 h-2 rounded-full bg-cosmic mr-3 group-hover/item:scale-150 transition-transform duration-300 shadow-sm"></span>
-                                <span
-                                    class="text-xs font-bold text-navy group-hover/item:text-cosmic transition-colors tracking-widest uppercase">Natal</span>
-                            </a>
-
-                            <!-- Opção: Retorno Solar -->
-                            <a href="mapa-retorno-solar.html"
-                                class="flex items-center px-4 py-3 rounded-xl hover:bg-navy/5 transition-colors group/item relative z-10">
-                                <span
-                                    class="w-2 h-2 rounded-full bg-gold mr-3 group-hover/item:scale-150 transition-transform duration-300 shadow-sm"></span>
-                                <span
-                                    class="text-xs font-bold text-navy group-hover/item:text-gold-deep transition-colors tracking-widest uppercase">Retorno
-                                    Solar</span>
-                            </a>
-
-                            <!-- Opção: Trânsito -->
-                            <a href="mapa-transito.html"
-                                class="flex items-center px-4 py-3 rounded-xl hover:bg-navy/5 transition-colors group/item relative z-10">
-                                <span
-                                    class="w-2 h-2 rounded-full bg-sky-500 mr-3 group-hover/item:scale-150 transition-transform duration-300 shadow-sm"></span>
-                                <span
-                                    class="text-xs font-bold text-navy group-hover/item:text-sky-600 transition-colors tracking-widest uppercase">Trânsito</span>
-                            </a>
-
-                            <!-- Opção: Astrocartográfico -->
-                            <a href="mapa-astrocartografico.html"
-                                class="flex items-center px-4 py-3 rounded-xl hover:bg-navy/5 transition-colors group/item relative z-10">
-                                <span
-                                    class="w-2 h-2 rounded-full bg-twilight mr-3 group-hover/item:scale-150 transition-transform duration-300 shadow-sm"></span>
-                                <span
-                                    class="text-xs font-bold text-navy group-hover/item:text-twilight-deep transition-colors tracking-widest uppercase">Astrocartográfico</span>
-                            </a>
-                            <!-- Opção: Sinastria -->
-                            <a href="mapa-sinastria.html"
-                                class="flex items-center px-4 py-3 rounded-xl hover:bg-navy/5 transition-colors group/item relative z-10">
-                                <span
-                                    class="w-2 h-2 rounded-full bg-rose-500 mr-3 group-hover/item:scale-150 transition-transform duration-300 shadow-sm"></span>
-                                <span
-                                    class="text-xs font-bold text-navy group-hover/item:text-rose-600 transition-colors tracking-widest uppercase">Sinastria</span>
-                            </a>
-
-                             <!-- Opção: Direcional -->
-                            <a href="mapa-direcional.html"
-                                class="flex items-center px-4 py-3 rounded-xl hover:bg-navy/5 transition-colors group/item relative z-10">
-                                <span
-                                    class="w-2 h-2 rounded-full bg-emerald-500 mr-3 group-hover/item:scale-150 transition-transform duration-300 shadow-sm"></span>
-                                <span
-                                    class="text-xs font-bold text-navy group-hover/item:text-emerald-600 transition-colors tracking-widest uppercase">Direcional</span>
-                            </a>
+                        <div class="bg-white rounded-2xl shadow-xl border border-navy/10 p-3 flex flex-col gap-1 relative">
+                            <div aria-hidden="true" class="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-white border-t border-l border-navy/10 rotate-45"></div>
+    
+                        <!-- Opção: Natal -->
+                        <a href="mapa-natal.html" class="flex items-center px-4 py-3 rounded-xl hover:bg-navy/5 focus-visible:bg-navy/5 focus-visible:outline-none transition-colors group/item relative z-10">
+                            <span class="w-2 h-2 rounded-full bg-cosmic mr-3 group-hover/item:scale-150 transition-transform duration-300 shadow-sm"></span>
+                            <span class="text-xs font-bold text-navy group-hover/item:text-cosmic-deep transition-colors tracking-widest uppercase">Natal</span>
+                        </a>
+    
+                        <!-- Opção: Retorno Solar -->
+                        <a href="mapa-retorno-solar.html" class="flex items-center px-4 py-3 rounded-xl hover:bg-navy/5 focus-visible:bg-navy/5 focus-visible:outline-none transition-colors group/item relative z-10">
+                            <span class="w-2 h-2 rounded-full bg-gold mr-3 group-hover/item:scale-150 transition-transform duration-300 shadow-sm"></span>
+                            <span class="text-xs font-bold text-navy group-hover/item:text-gold-deep transition-colors tracking-widest uppercase">Retorno Solar</span>
+                        </a>
+    
+                        <!-- Opção: Trânsito -->
+                        <a href="mapa-transito.html" class="flex items-center px-4 py-3 rounded-xl hover:bg-navy/5 focus-visible:bg-navy/5 focus-visible:outline-none transition-colors group/item relative z-10">
+                            <span class="w-2 h-2 rounded-full bg-ocean mr-3 group-hover/item:scale-150 transition-transform duration-300 shadow-sm"></span>
+                            <span class="text-xs font-bold text-navy group-hover/item:text-ocean-deep transition-colors tracking-widest uppercase">Trânsito</span>
+                        </a>
+    
+                        <!-- Opção: Direcional -->
+                        <a href="mapa-direcional.html" aria-current="page" class="flex items-center px-4 py-3 rounded-xl hover:bg-navy/5 focus-visible:bg-navy/5 focus-visible:outline-none transition-colors group/item relative z-10 bg-navy/5">
+                            <span class="w-2 h-2 rounded-full bg-jade mr-3 group-hover/item:scale-150 transition-transform duration-300 shadow-sm"></span>
+                            <span class="text-xs font-bold text-navy group-hover/item:text-jade-deep transition-colors tracking-widest uppercase">Direcional</span>
+                        </a>
+    
+                        <!-- Opção: Astrocartográfico -->
+                        <a href="mapa-astrocartografico.html" class="flex items-center px-4 py-3 rounded-xl hover:bg-navy/5 focus-visible:bg-navy/5 focus-visible:outline-none transition-colors group/item relative z-10">
+                            <span class="w-2 h-2 rounded-full bg-twilight mr-3 group-hover/item:scale-150 transition-transform duration-300 shadow-sm"></span>
+                            <span class="text-xs font-bold text-navy group-hover/item:text-twilight-deep transition-colors tracking-widest uppercase">Astrocartográfico</span>
+                        </a>
+    
+                        <!-- Opção: Sinastria -->
+                        <a href="mapa-sinastria.html" class="flex items-center px-4 py-3 rounded-xl hover:bg-navy/5 focus-visible:bg-navy/5 focus-visible:outline-none transition-colors group/item relative z-10">
+                            <span class="w-2 h-2 rounded-full bg-ruby mr-3 group-hover/item:scale-150 transition-transform duration-300 shadow-sm"></span>
+                            <span class="text-xs font-bold text-navy group-hover/item:text-ruby-deep transition-colors tracking-widest uppercase">Sinastria</span>
+                        </a>
                         </div>
                     </div>
                 </div>
-
+    
                 <a href="../about.html" class="nav-link hover:text-cosmic transition-colors">Sobre mim</a>
                 <a href="../contact.html" class="nav-link hover:text-cosmic transition-colors">Contato</a>
             </nav>
-
-            <!-- Botão do menu mobile -->
-            <button id="menu-toggle" type="button" class="md:hidden text-navy hover:text-gold transition"
-                aria-label="Abrir menu">
-                <svg data-icon="open" aria-hidden="true" class="w-6 h-6" fill="none" stroke="currentColor"
-                    viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16">
-                    </path>
-                </svg>
+    
+            <!-- Botão do menu mobile (aberto/fechado por assets/js/main.js) -->
+            <button id="menu-toggle" type="button" class="md:hidden text-navy hover:text-gold transition" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu">
+                <svg data-icon="open" aria-hidden="true" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                <svg data-icon="close" aria-hidden="true" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 6l12 12M18 6L6 18"></path></svg>
             </button>
         </div>
+    
+        <!-- Menu mobile -->
+        <nav id="mobile-menu" aria-label="Principal (mobile)" class="hidden md:hidden border-t border-navy/5 px-6 pb-4 text-sm uppercase tracking-widest font-light text-navy/80">
+            <a href="../home.html" class="block py-3 hover:text-cosmic">Home</a>
+            <a href="../maps.html" class="block py-3 text-cosmic font-bold" aria-current="true">Mapas</a>
+            <div class="ml-1 mb-1 pl-4 border-l border-navy/10">
+                <a href="mapa-natal.html" class="flex items-center py-2 text-xs hover:text-cosmic"><span class="w-2 h-2 rounded-full bg-cosmic mr-3"></span>Natal</a>
+                <a href="mapa-retorno-solar.html" class="flex items-center py-2 text-xs hover:text-cosmic"><span class="w-2 h-2 rounded-full bg-gold mr-3"></span>Retorno Solar</a>
+                <a href="mapa-transito.html" class="flex items-center py-2 text-xs hover:text-cosmic"><span class="w-2 h-2 rounded-full bg-ocean mr-3"></span>Trânsito</a>
+                <a href="mapa-direcional.html" aria-current="page" class="flex items-center py-2 text-xs text-cosmic font-bold"><span class="w-2 h-2 rounded-full bg-jade mr-3"></span>Direcional</a>
+                <a href="mapa-astrocartografico.html" class="flex items-center py-2 text-xs hover:text-cosmic"><span class="w-2 h-2 rounded-full bg-twilight mr-3"></span>Astrocartográfico</a>
+                <a href="mapa-sinastria.html" class="flex items-center py-2 text-xs hover:text-cosmic"><span class="w-2 h-2 rounded-full bg-ruby mr-3"></span>Sinastria</a>
+            </div>
+            <a href="../about.html" class="block py-3 hover:text-cosmic">Sobre mim</a>
+            <a href="../contact.html" class="block py-3 hover:text-cosmic">Contato</a>
+        </nav>
     </header>
 
     <main id="conteudo" class="flex-grow">
@@ -199,8 +137,8 @@
         <div class="bg-offwhite pt-8 pb-4">
             <div class="max-w-7xl mx-auto px-6 md:px-12">
                 <a href="../maps.html"
-                    class="inline-flex items-center text-xs font-bold uppercase tracking-widest text-navy/50 hover:text-emerald-600 transition-colors">
-                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    class="inline-flex items-center text-xs font-bold uppercase tracking-widest text-navy/50 hover:text-jade-deep transition-colors">
+                    <svg aria-hidden="true" class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
                     </svg>
@@ -209,7 +147,7 @@
             </div>
         </div>
 
-        <!-- HERO SECTION: Mapa Direcional (Verde / emerald-600) -->
+        <!-- HERO SECTION: Mapa Direcional (Verde / jade-deep) -->
         <section class="bg-offwhite py-12 md:py-20 relative overflow-hidden">
             <div
                 class="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10">
@@ -217,7 +155,7 @@
                 <!-- Texto Principal -->
                 <div class="space-y-6">
                     <div
-                        class="inline-flex items-center gap-3 px-4 py-2 bg-emerald-600/10 border border-emerald-600/30 rounded-full text-emerald-600 mb-2">
+                        class="inline-flex items-center gap-3 px-4 py-2 bg-jade-deep/10 border border-jade-deep/30 rounded-full text-jade-deep mb-2">
                         <svg aria-hidden="true" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"
                             stroke-width="1.5">
                             <circle cx="12" cy="12" r="10" />
@@ -227,25 +165,25 @@
                     </div>
 
                     <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl text-navy leading-tight">
-                        Mapa <span class="text-emerald-600 italic">Direcional</span>
+                        Mapa <span class="text-jade-deep italic">Direcional</span>
                     </h1>
 
-                    <div class="w-16 h-px bg-emerald-600 opacity-70"></div>
+                    <div class="w-16 h-px bg-jade-deep opacity-70"></div>
 
                     <p class="font-sans text-navy/75 text-lg md:text-xl font-light leading-relaxed">
                         Uma bússola astrológica, o Mapa Direcional aprofunda uma área específica da sua jornada como
-                        <strong class="text-emerald-600">Amor, Vocação, Saúde, Prosperidade ou Espiritualidade</strong>
+                        <strong class="text-jade-deep">Amor, Vocação, Saúde, Prosperidade ou Espiritualidade</strong>
                         para oferecer clareza absoluta sobre os seus próximos passos.
                     </p>
 
                     <div class="pt-4 flex flex-col sm:flex-row gap-4">
-                        <a href="contact.html" data-wa
+                        <a href="../contact.html" data-wa
                             data-wa-text="Olá! Gostaria de agendar a leitura de Mapa Direcional."
-                            class="inline-flex items-center justify-center px-8 py-4 bg-emerald-600 text-white font-bold rounded-full hover:bg-navy transition-all duration-300 font-sans tracking-widest text-xs uppercase shadow-lg shadow-emerald-600/20">
+                            class="inline-flex items-center justify-center px-8 py-4 bg-jade-deep text-white font-bold rounded-full hover:bg-navy transition-all duration-300 font-sans tracking-widest text-xs uppercase shadow-lg shadow-jade-deep/20">
                             Agendar Leitura
                         </a>
                         <a href="#detalhes"
-                            class="inline-flex items-center justify-center px-8 py-4 bg-transparent border border-navy/20 text-navy rounded-full hover:border-emerald-600 hover:text-emerald-600 transition-all duration-300 font-sans tracking-widest text-xs uppercase font-bold">
+                            class="inline-flex items-center justify-center px-8 py-4 bg-transparent border border-navy/20 text-navy rounded-full hover:border-jade-deep hover:text-jade-deep transition-all duration-300 font-sans tracking-widest text-xs uppercase font-bold">
                             O que exploramos ↓
                         </a>
                     </div>
@@ -290,7 +228,7 @@
             <div class="max-w-7xl mx-auto px-6 md:px-12">
 
                 <div class="text-center mb-16 max-w-3xl mx-auto">
-                    <span class="text-emerald-600 uppercase tracking-[0.2em] text-xs font-bold font-sans">Escolha o seu
+                    <span class="text-jade-deep uppercase tracking-[0.2em] text-xs font-bold font-sans">Escolha o seu
                         foco</span>
                     <h2 class="font-serif text-3xl md:text-4xl text-navy mt-4 mb-6">Qual modalidade faz sentido para
                         você?</h2>
@@ -303,13 +241,13 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Subtipo 1: Amor (Rosa) -->
                     <div
-                        class="bg-offwhite p-8 rounded-2xl border border-navy/5 hover:border-rose-500/40 hover:shadow-lg transition-all duration-300">
+                        class="bg-offwhite p-8 rounded-2xl border border-navy/5 hover:border-ruby/40 hover:shadow-lg transition-all duration-300">
                         <div
-                            class="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-rose-500/10 to-transparent rounded-bl-full">
+                            class="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-ruby/10 to-transparent rounded-bl-full">
                         </div>
                         <div
-                            class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-rose-500 mb-6 border border-rose-500/20 shadow-sm relative z-10">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-ruby mb-6 border border-ruby/20 shadow-sm relative z-10">
+                            <svg aria-hidden="true" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                                 stroke-width="1.5">
                                 <path stroke-linecap="round" stroke-linejoin="round"
                                     d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z">
@@ -325,12 +263,12 @@
 
                     <!-- Subtipo 2: Vocacional (Azul Sky) -->
                     <div
-                        class="bg-offwhite p-8 rounded-2xl border border-navy/5 hover:border-sky-600/40 hover:shadow-lg transition-all duration-300">
+                        class="bg-offwhite p-8 rounded-2xl border border-navy/5 hover:border-ocean-deep/40 hover:shadow-lg transition-all duration-300">
                         <div
-                            class="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-sky-600/10 to-transparent rounded-bl-full">
+                            class="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-ocean-deep/10 to-transparent rounded-bl-full">
                         </div>
                         <div
-                            class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-sky-600 mb-6 border border-sky-600/20 shadow-sm relative z-10">
+                            class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-ocean-deep mb-6 border border-ocean-deep/20 shadow-sm relative z-10">
                             <svg aria-hidden="true" class="w-6 h-6" fill="none" stroke="currentColor"
                                 viewBox="0 0 24 24" stroke-width="1.5">
                                 <circle cx="12" cy="12" r="10" />
@@ -347,13 +285,13 @@
 
                     <!-- Subtipo 3: Saúde (Esmeralda) -->
                     <div
-                        class="bg-offwhite p-8 rounded-2xl border border-navy/5 hover:border-emerald-500/40 hover:shadow-lg transition-all duration-300">
+                        class="bg-offwhite p-8 rounded-2xl border border-navy/5 hover:border-jade/40 hover:shadow-lg transition-all duration-300">
                         <div
-                            class="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-emerald-500/10 to-transparent rounded-bl-full">
+                            class="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-jade/10 to-transparent rounded-bl-full">
                         </div>
                         <div
-                            class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-emerald-500 mb-6 border border-emerald-500/20 shadow-sm relative z-10">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-jade mb-6 border border-jade/20 shadow-sm relative z-10">
+                            <svg aria-hidden="true" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                                 stroke-width="1.5">
                                 <path stroke-linecap="round" stroke-linejoin="round"
                                     d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z">
@@ -377,7 +315,7 @@
                         </div>
                         <div
                             class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-gold-deep mb-6 border border-gold/20 shadow-sm relative z-10">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            <svg aria-hidden="true" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                                 stroke-width="1.5">
                                 <path stroke-linecap="round" stroke-linejoin="round"
                                     d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z">
@@ -399,7 +337,7 @@
                         </div>
                         <div
                             class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-cosmic mb-6 border border-cosmic/20 shadow-sm relative z-10">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            <svg aria-hidden="true" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                                 stroke-width="1.5">
                                 <path stroke-linecap="round" stroke-linejoin="round"
                                     d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z">
@@ -415,12 +353,12 @@
 
                     <!-- Subtipo 6: Síntese e Direção Geral (Verde) -->
                     <div
-                        class="bg-offwhite p-8 rounded-2xl border border-navy/5 hover:border-emerald-600/40 hover:shadow-lg transition-all duration-300 flex flex-col justify-center items-center text-center">
+                        class="bg-offwhite p-8 rounded-2xl border border-navy/5 hover:border-jade-deep/40 hover:shadow-lg transition-all duration-300 flex flex-col justify-center items-center text-center">
                         <div
-                            class="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-emerald-600/10 to-transparent rounded-bl-full">
+                            class="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-jade-deep/10 to-transparent rounded-bl-full">
                         </div>
                         <div
-                            class="w-12 h-12 bg-emerald-600/10 rounded-full flex items-center justify-center text-emerald-600 mb-4 border border-emerald-600/30 relative z-10">
+                            class="w-12 h-12 bg-jade-deep/10 rounded-full flex items-center justify-center text-jade-deep mb-4 border border-jade-deep/30 relative z-10">
                             <svg aria-hidden="true" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
                                 stroke="currentColor" stroke-width="1.5">
                                 <circle cx="12" cy="12" r="10" />
@@ -446,7 +384,7 @@
         <section class="py-20 bg-offwhite relative overflow-hidden text-navy">
 
             <!-- Elemento decorativo de fundo -->
-            <div class="absolute inset-0 bg-gradient-to-r from-emerald-600/5 via-transparent to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-jade-deep/5 via-transparent to-transparent"></div>
 
             <div
                 class="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-16 relative z-10 items-center">
@@ -469,8 +407,8 @@
                         <!-- Consulta ao vivo -->
                         <div class="p-6 rounded-2xl bg-white border border-navy/10 shadow-sm">
 
-                            <div class="w-11 h-11 rounded-full bg-emerald-600/10 flex items-center justify-center mb-5">
-                                <svg class="w-5 h-5 text-emerald-600" fill="none" stroke="currentColor"
+                            <div class="w-11 h-11 rounded-full bg-jade-deep/10 flex items-center justify-center mb-5">
+                                <svg aria-hidden="true" class="w-5 h-5 text-jade-deep" fill="none" stroke="currentColor"
                                     viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                         d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z">
@@ -482,7 +420,7 @@
                                 Consulta ao Vivo
                             </h3>
 
-                            <span class="text-emerald-700 text-xs uppercase tracking-widest">
+                            <span class="text-jade-deep text-xs uppercase tracking-widest">
                                 Aproximadamente 1 hora
                             </span>
 
@@ -498,8 +436,8 @@
                         <!-- Material em PDF -->
                         <div class="p-6 rounded-2xl bg-white border border-navy/10 shadow-sm">
 
-                            <div class="w-11 h-11 rounded-full bg-emerald-600/10 flex items-center justify-center mb-5">
-                                <svg class="w-5 h-5 text-emerald-600" fill="none" stroke="currentColor"
+                            <div class="w-11 h-11 rounded-full bg-jade-deep/10 flex items-center justify-center mb-5">
+                                <svg aria-hidden="true" class="w-5 h-5 text-jade-deep" fill="none" stroke="currentColor"
                                     viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                         d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
@@ -511,7 +449,7 @@
                                 Leitura em PDF
                             </h3>
 
-                            <span class="text-emerald-700 text-xs uppercase tracking-widest">
+                            <span class="text-jade-deep text-xs uppercase tracking-widest">
                                 Formato digital
                             </span>
 
@@ -528,9 +466,9 @@
                     </div>
 
                     <!-- Dados necessários -->
-                    <div class="flex items-start gap-4 p-5 rounded-xl bg-emerald-600/5 border border-emerald-600/20">
+                    <div class="flex items-start gap-4 p-5 rounded-xl bg-jade-deep/5 border border-jade-deep/20">
 
-                        <svg class="w-5 h-5 text-emerald-600 shrink-0 mt-1" fill="none" stroke="currentColor"
+                        <svg aria-hidden="true" class="w-5 h-5 text-jade-deep shrink-0 mt-1" fill="none" stroke="currentColor"
                             viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z">
@@ -538,9 +476,9 @@
                         </svg>
 
                         <div>
-                            <h4 class="font-serif text-lg text-navy mb-1">
+                            <h3 class="font-serif text-lg text-navy mb-1">
                                 Informações para a leitura
-                            </h4>
+                            </h3>
                             <p class="font-sans text-navy/70 text-sm leading-relaxed font-light">
                                 Para realizar os cálculos astrológicos, são necessários
                                 a data, o horário exato e a cidade de nascimento.
@@ -553,11 +491,11 @@
 
                 <!-- Card de Agendamento CTA -->
                 <div
-                    class="bg-white p-10 md:p-12 rounded-3xl shadow-xl text-center border border-emerald-600/30 relative">
+                    class="bg-white p-10 md:p-12 rounded-3xl shadow-xl text-center border border-jade-deep/30 relative">
 
                     <div class="absolute -top-6 left-1/2 -translate-x-1/2">
                         <div
-                            class="bg-emerald-600 text-white font-bold text-[10px] uppercase tracking-widest px-4 py-2 rounded-full border-4 border-offwhite shadow-sm">
+                            class="bg-jade-deep text-white font-bold text-xs uppercase tracking-widest px-4 py-2 rounded-full border-4 border-offwhite shadow-sm">
                             Leitura Direcionada
                         </div>
                     </div>
@@ -571,7 +509,7 @@
                     </p>
 
                     <a href="../contact.html" data-wa data-wa-text="Olá! Gostaria de agendar a leitura do Mapa Direcional."
-                        class="block w-full py-4 text-center bg-emerald-600 text-white font-bold rounded-full hover:bg-navy hover:text-offwhite transition-all duration-300 text-xs uppercase tracking-widest shadow-lg hover:shadow-xl">
+                        class="block w-full py-4 text-center bg-jade-deep text-white font-bold rounded-full hover:bg-navy hover:text-offwhite transition-all duration-300 text-xs uppercase tracking-widest shadow-lg hover:shadow-xl">
                         Consultar Disponibilidade e Valores
                     </a>
                 </div>
@@ -586,13 +524,13 @@
     <footer class="w-full border-t border-navy/5 py-10 text-center relative mt-auto bg-offwhite">
         <div class="max-w-7xl mx-auto px-6 flex flex-col items-center justify-center">
             <div aria-hidden="true" class="flex gap-2 mb-5 text-gold/40">
-                <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 24 24">
+                <svg aria-hidden="true" class="w-3 h-3" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12 2L14.5 9.5H22L16 14L18.5 21.5L12 17L5.5 21.5L8 14L2 9.5H9.5L12 2Z" />
                 </svg>
-                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <svg aria-hidden="true" class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12 2L14.5 9.5H22L16 14L18.5 21.5L12 17L5.5 21.5L8 14L2 9.5H9.5L12 2Z" />
                 </svg>
-                <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 24 24">
+                <svg aria-hidden="true" class="w-3 h-3" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12 2L14.5 9.5H22L16 14L18.5 21.5L12 17L5.5 21.5L8 14L2 9.5H9.5L12 2Z" />
                 </svg>
             </div>
