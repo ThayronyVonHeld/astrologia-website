@@ -92,7 +92,7 @@ body {
 #voltar-ao-conteudo {
     animation: mostrar-botao linear both;
     animation-timeline: scroll();
-    animation-range: 500px 1200px;
+    animation-range: 800px 1400px;
 }
 
 @keyframes mostrar-botao {
