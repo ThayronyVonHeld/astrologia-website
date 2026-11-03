@@ -8,11 +8,11 @@
             <!-- Menu desktop -->
             <nav aria-label="Principal"
                 class="hidden md:flex space-x-8 text-sm uppercase tracking-widest font-light text-navy/80 items-center">
-                <a href="home.html" class="nav-link hover:text-cosmic transition-colors" aria-current="true">Home</a>
+                <a href="home.html" class="nav-link hover:text-cosmic transition-colors">Home</a>
 
                 <!-- Item com dropdown (Mapas): abre com hover OU foco de teclado -->
                 <div class="relative group h-full flex items-center py-4 -my-4">
-                    <a href="maps.html" class="nav-link text-cosmic flex items-center gap-1">
+                    <a href="maps.html" class="nav-link text-cosmic flex items-center gap-1" aria-current="true">
                         Mapas
                         <svg aria-hidden="true"
                             class="w-4 h-4 transition-transform duration-300 group-hover:rotate-180 group-focus-within:rotate-180"
@@ -101,7 +101,7 @@
         <!-- Menu mobile -->
         <nav id="mobile-menu" aria-label="Principal (mobile)"
             class="hidden md:hidden border-t border-navy/5 px-6 pb-4 text-sm uppercase tracking-widest font-light text-navy/80">
-            <a href="home.html" class="block py-3 hover:text-cosmic" font-bold>Home</a>
+            <a href="home.html" class="block py-3 hover:text-cosmic">Home</a>
 
             <!-- Accordion Mapas Mobile -->
             <div class="relative group/mobile-dropdown">
@@ -111,7 +111,7 @@
                     aria-expanded="false"
                     onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('svg').classList.toggle('rotate-180')">
                     <span class="flex items-center gap-2 uppercase">
-                        <a href="maps.html" class="block py-3 hover:text-cosmic">Mapas</a>
+                        <a href="maps.html" class="block py-3 hover:text-cosmic font-bold" aria-current="page">Mapas</a>
                     </span>
                     <svg class="w-5 h-5 transition-transform duration-300" fill="none" stroke="currentColor"
                         viewBox="0 0 24 24">
